@@ -1,0 +1,5 @@
+2 => `${new Date().getDate().toLocaleString()}\n`
+Sat Mar 02 2024 14:00:42 GMT+0530 (India Standard Time) => `${new Date()}\n`
+2:01:39 pm => `${new Date().toLocaleTimeString()}\n`
+2/3/2024 = `${new Date().toLocaleDateString()}\n`
+1709368640369

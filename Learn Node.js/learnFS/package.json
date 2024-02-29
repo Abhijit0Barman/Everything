@@ -1,0 +1,14 @@
+{
+  "type": "commonjs",
+  "name": "learnfs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "file.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node file.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
