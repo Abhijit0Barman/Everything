@@ -1,4 +1,7 @@
 const fs = require("fs");
+const os = require("os");
+
+console.log(os.cpus());
 
 fs.writeFileSync("./write.txt", "hello world"); //Sync
 const result = fs.readFileSync("./read.txt", "utf-8"); //Sync
@@ -14,13 +17,12 @@ fs.readFile("./read.txt", "utf-8", (err, data) => {
   }
 }); //Async
 
-fs.appendFileSync("./append.txt", `${new Date().toISOString().split("T")}\n`);
+fs.appendFileSync("./append.txt", `${new Date().toISOString().split("T")}\n`); //Adding or Replacing data to a file
+fs.cpSync("./append.txt", "./copy.txt"); //making copy
 
-fs.cpSync("./append.txt", "./copy.txt");
+fs.unlinkSync("./copy.txt"); //deleting file
 
-fs.unlinkSync("./copy.txt");
+// console.log(fs.statSync("./read.txt")); //checking status
 
-console.log(fs.statSync("./read.txt"));
-
-fs.mkdirSync("single");
-fs.mkdirSync("dir/v/b", { recursive: true });
+// fs.mkdirSync("single");//creating folder
+// fs.mkdirSync("dir/v/b", { recursive: true });//Creating multiple nested folder.
