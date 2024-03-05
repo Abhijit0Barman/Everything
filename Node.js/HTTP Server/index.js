@@ -9,18 +9,25 @@ const myServer = http.createServer((req, res) => {
     req.headers["x-forwarded-for"] ||
     req.socket.remoteAddress ||
     null;
-  console.log(ipAddress);
+  // console.log(ipAddress);
 
-  const log = `${Date.now()}: ${req.url} New Req Received ${ipAddress}\n`;
+  const log = `method ${req.method}||date ${Date.now()}||url ${
+    req.url
+  }||ip ${ipAddress}\n`;
   fs.appendFile("./log.txt", log, (err, data) => {
-    // console.log(err, "===>", data);
     switch (req.url) {
       case "/":
-        res.end("Homepate");
+        if (req.method === "GET") res.end("Homepage");
         break;
       case "/about":
         res.end(`<b>about <h1>page</h1></b>`);
         break;
+      case "/signup": {
+        if (req.method === "GET") res.end("This is a GET method call");
+        else if (req.method === "POST") res.end("This is a POST method call");
+        else if (req.method === "PUT") res.end("This is a PUT method call");
+        break;
+      }
       default:
         res.end("404 Not Found");
     }
