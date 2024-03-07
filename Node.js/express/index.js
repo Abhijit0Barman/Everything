@@ -40,7 +40,7 @@ app.get("/users", (req, res) => {
 app.get("/", (req, res) => {
   // if (req.url === "favicon.ico") return;
   // res.status(200).json({message:"hello world"});
-  res.setHeader("devlopBy", "Abhijit");
+  res.setHeader("X-devlopBy", "Abhijit"); //Custom Header by using "X"
   return res.status(200).end(`hello world`);
 });
 
@@ -50,6 +50,10 @@ app.get("/api/users", (req, res) => {
 
 app.post("/api/users", (req, res) => {
   const body = req.body;
+  const { first_name, last_name, email, gender, job_title } = body;
+  if (!body || !job_title || !gender || !email || !last_name || !first_name) {
+    return res.status(400).json({ error: "All fields is required" });
+  }
   // console.log(body);
   users.push({ ...body, id: users.length + 1 });
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
@@ -66,6 +70,7 @@ app
   .get((req, res) => {
     const id = Number(req.params.id);
     const user = users.find((user) => user.id === id);
+    if(!user)return res.status(404).json({err:"Does Not Exist"})
     return res.json(user);
   })
   .patch((req, res) => {
