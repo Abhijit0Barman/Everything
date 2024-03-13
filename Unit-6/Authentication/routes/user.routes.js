@@ -1,6 +1,8 @@
 const { UserModel } = require("../models/user.model");
 const express = require("express");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 const userRouter = express.Router();
 //inbuilt middleware  of express for routing
@@ -49,7 +51,14 @@ userRouter.post("/login", async (req, res) => {
                 if (result) {
                     res.status(201).send({
                         msg: "User logged in successfully",
-                        user: user,
+                        // user: user,
+                        token: jwt.sign(
+                            { email: email },
+                            process.env.secretKey
+                            // {
+                            //     expiresIn: "1h",
+                            // }
+                        ),
                     });
                 } else {
                     res.status(201).send({ msg: "Wrong Password!" });
