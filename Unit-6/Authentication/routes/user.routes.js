@@ -2,6 +2,9 @@ const { UserModel } = require("../models/user.model");
 const express = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { blacklist } = require("../blacklist");
+const { auth } = require("../middleware/auth.middleware");
+const { BlacklistModel } = require("../models/blacklist.model");
 require("dotenv").config();
 
 const userRouter = express.Router();
@@ -49,16 +52,22 @@ userRouter.post("/login", async (req, res) => {
                 }
                 // result == true
                 if (result) {
+                    const token = jwt.sign(
+                        { email: email },
+                        process.env.secretKey,
+                        { expiresIn: "7d" }
+                    );
+
+                    const refresh_token = jwt.sign(
+                        { email: email },
+                        process.env.REFRESH_TOKEN_SECRET,
+                        { expiresIn: "28d" }
+                    );
+
                     res.status(201).send({
                         msg: "User logged in successfully",
-                        // user: user,
-                        token: jwt.sign(
-                            { email: email },
-                            process.env.secretKey
-                            // {
-                            //     expiresIn: "1h",
-                            // }
-                        ),
+                        token: token,
+                        refresh_token,
                     });
                 } else {
                     res.status(201).send({ msg: "Wrong Password!" });
@@ -69,6 +78,21 @@ userRouter.post("/login", async (req, res) => {
                 msg: "User does not exist, Please Register!",
             });
         }
+    } catch (error) {
+        res.status(401).send({ error: error.message });
+    }
+});
+
+userRouter.get("/logout", auth, async (req, res) => {
+    const token = req.headers.authorization?.split(" ")[1];
+    try {
+        const blackToken = new BlacklistModel({ token });
+        await blackToken.save();
+        res.status(201).send({
+            msg: "User Logout successfully",
+        });
+        // blacklist.push(token);
+        // res.send({ msg: "Logged out Successfully." });
     } catch (error) {
         res.status(401).send({ error: error.message });
     }
