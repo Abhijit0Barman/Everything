@@ -1,15 +1,15 @@
-2024-03-06T12:57:40.076Z GET /api/users/2
-2024-03-06T12:57:49.102Z GET /api/users/1003
-2024-03-06T12:57:54.133Z GET /api/users/
-2024-03-06T12:57:59.304Z GET /api/users/
-2024-03-06T12:58:46.976Z GET /api/users/||/api/users/
-2024-03-06T12:58:53.009Z GET /api/users/||/api/users/
-::1 2024-03-06T13:00:08.309Z GET /api/users/||/api/users/
-::1 2024-03-06T13:00:30.357Z GET /api/users/||/api/users/
-::1 2024-03-06T13:10:26.348Z GET /||/
-::1 2024-03-06T13:10:42.941Z GET /||/
-::1 2024-03-06T13:11:02.913Z GET /||/
-::1 2024-03-06T13:11:21.417Z GET /||/
-::1 2024-03-06T13:12:14.991Z GET /||/
-::1 2024-03-06T13:12:15.567Z GET /favicon.ico||/favicon.ico
-::1 2024-03-06T13:12:46.446Z GET /||/
+::1 2024-03-14T12:48:29.448Z GET /users||/users
+::1 2024-03-14T12:48:42.124Z GET /api/users||/api/users
+::1 2024-03-14T12:48:42.338Z GET /images/icons/gear.png||/images/icons/gear.png
+::1 2024-03-14T12:49:03.245Z GET /api/users||/api/users
+::1 2024-03-14T12:50:32.436Z POST /api/users||/api/users
+::1 2024-03-14T12:52:08.362Z POST /api/users||/api/users
+::1 2024-03-14T12:52:10.507Z POST /api/users||/api/users
+::1 2024-03-14T12:54:30.381Z POST /api/users||/api/users
+::1 2024-03-14T12:55:19.103Z GET /api/users/65f2f38625a45c60a15f36b9||/api/users/65f2f38625a45c60a15f36b9
+::1 2024-03-14T12:55:54.834Z DELETE /api/users/65f2f38625a45c60a15f36b9||/api/users/65f2f38625a45c60a15f36b9
+::1 2024-03-14T12:57:54.355Z GET /api/users||/api/users
+::1 2024-03-14T12:57:54.724Z GET /images/icons/gear.png||/images/icons/gear.png
+::1 2024-03-14T12:58:04.514Z PATCH /api/users/65f2e1036bec71ec2f6532b3||/api/users/65f2e1036bec71ec2f6532b3
+::1 2024-03-14T12:58:16.529Z GET /api/users||/api/users
+::1 2024-03-14T12:58:16.680Z GET /images/icons/gear.png||/images/icons/gear.png
