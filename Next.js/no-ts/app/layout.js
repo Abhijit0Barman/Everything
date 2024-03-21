@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Shojumaru } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Shojumaru({ subsets: ["latin"] ,weight:'400'});
 
 export const metadata = {
   title: "Learning Next.js",
