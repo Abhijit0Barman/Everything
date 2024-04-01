@@ -1,13 +1,18 @@
 import "./App.css";
+import Timer from "./Components/Timer";
 import UseEffect from "./Hooks/UseEffect";
 import UseState from "./Hooks/UseState";
 
 function App() {
   return (
     <>
-      <UseState />
-      <hr />
-      <UseEffect />
+      <Timer />
+      <p>
+        <UseState />
+      </p>
+      <p>
+        <UseEffect />
+      </p>
     </>
   );
 }
