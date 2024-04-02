@@ -3,7 +3,9 @@ import Timer from "./Components/Timer";
 import UseEffect from "./Hooks/UseEffect";
 import UseState from "./Hooks/UseState";
 
+
 function App() {
+
   return (
     <>
       <Timer />
