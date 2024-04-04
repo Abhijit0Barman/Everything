@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from 'axios'
 
+async function getData() {
+  try {
+    let res = await fetch("https://reqres.in/api/users?page=2");
+    let data = await res.json();
+    return data.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 const Avatar = () => {
   const [count, setCount] = useState([]);
 
@@ -10,15 +20,15 @@ const Avatar = () => {
     // .then((data) => setCount(data.data))
     // .catch((err) => console.log(err));
 
-    // getData().then(data=>setCount(data))
+    getData().then(data => setCount(data))
 
-    axios
-      .get("https://reqres.in/api/users?page=2")
-      .then((data) => {
-        // console.log(data);
-        setCount(data.data)
-      })
-      .catch((err) => console.log(err));
+    // axios
+    //   .get("https://reqres.in/api/users?page=2")
+    //   .then((data) => {
+    //     // console.log(data);
+    //     setCount(data.data)
+    //   })
+    //   .catch((err) => console.log(err));
   }, []);
 
   console.log(count);
@@ -36,12 +46,4 @@ const Avatar = () => {
 };
 export default Avatar;
 
-// async function getData() {
-//   try {
-//     let res = await fetch("https://reqres.in/api/users?page=2");
-//     let data = await res.json();
-//     return data.data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
+
