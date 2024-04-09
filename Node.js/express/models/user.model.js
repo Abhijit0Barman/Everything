@@ -14,13 +14,26 @@ const userSchema = new mongoose.Schema(
       type: String,
       require: true,
       unique: true,
+      validate: {
+        validator: function (v) {
+          return /\S+@\S+\.\S+/.test(v); // Validate email format
+        },
+        message: (props) => `${props.value} is not a valid email address!`,
+      },
     },
     jobTitle: {
       type: String,
+      minlength: 3,
+      maxlength: 50,
     },
     gender: {
       type: String,
-      // enum: ["Male", "Female"],
+      enum: ["Male", "Female"],
+    },
+    age: {
+      type: Number,
+      min: 18,
+      max: 120,
     },
   },
   { timestamps: true, versionKey: false }

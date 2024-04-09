@@ -17,7 +17,17 @@ fs.readFile("./read.txt", "utf-8", (err, data) => {
   }
 }); //Async
 
-fs.appendFileSync("./append.txt", `${new Date().toISOString().split("T")}\n`); //Adding or Replacing data to a file
+// fs.appendFileSync("./append.txt", `${new Date().toISOString().split("T")}\n`); //Adding or Replacing data to a file
+
+fs.appendFile("./append.txt",`${new Date().toISOString().split("T")}\n`,(err) => {
+    if (err) {
+      console.error("Error appending to file:", err);
+    } else {
+      console.log("Successfully appended to file.");
+    }
+  }
+);
+
 fs.cpSync("./append.txt", "./copy.txt"); //making copy
 
 fs.unlinkSync("./copy.txt"); //deleting file
@@ -26,3 +36,5 @@ fs.unlinkSync("./copy.txt"); //deleting file
 
 // fs.mkdirSync("single");//creating folder
 // fs.mkdirSync("dir/v/b", { recursive: true });//Creating multiple nested folder.
+
+

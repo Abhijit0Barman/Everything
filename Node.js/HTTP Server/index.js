@@ -9,7 +9,7 @@ const myServer = http.createServer((req, res) => {
     req.headers["x-forwarded-for"] ||
     req.socket.remoteAddress ||
     null;
-  // console.log(ipAddress);
+  console.log(ipAddress);
 
   const log = `method ${req.method}||date ${Date.now()}||url ${
     req.url
