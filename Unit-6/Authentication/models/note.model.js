@@ -8,9 +8,11 @@ const noteSchema = mongooes.Schema(
       type: String,
       require: true,
     },
+    username: String,
   },
   {
-    timestamps: true,versionKey: false,
+    timestamps: true,
+    versionKey: false,
   }
 );
 

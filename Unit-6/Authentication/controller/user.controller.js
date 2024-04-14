@@ -4,6 +4,50 @@ const jwt = require("jsonwebtoken");
 const { BlacklistModel } = require("../models/blacklist.model");
 require("dotenv").config();
 
+const handleLogin = async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await UserModel.findOne({ email });
+    if (user) {
+      bcrypt.compare(password, user.password, function (err, result) {
+        if (err) {
+          res.status(201).send({ error: err.message });
+        }
+        // result == true
+        if (result) {
+          const token = jwt.sign(
+            { userID: user._id, username: user.username },
+            process.env.secretKey,
+            {
+              expiresIn: "7d",
+            }
+          );
+
+          const refresh_token = jwt.sign(
+            { email: email },
+            process.env.REFRESH_TOKEN_SECRET,
+            { expiresIn: "28d" }
+          );
+
+          res.status(201).send({
+            msg: "User Logged in Successfully",
+            token: token,
+            refresh_token,
+          });
+        } else {
+          res.status(201).send({ msg: "Wrong Password!" });
+        }
+      });
+    } else {
+      res.status(201).send({
+        msg: "User does not exist, Please Register!",
+      });
+    }
+  } catch (error) {
+    res.status(401).send({ error: error.message });
+  }
+};
+
 async function handleGetAllUsers(req, res) {
   try {
     const allDbUsers = await UserModel.find({});
@@ -84,60 +128,30 @@ const handleCreateNewUser = async (req, res) => {
   }
 };
 
-const handleLogin = async (req, res) => {
-  const { email, password } = req.body;
+const handleLogout = async (req, res) => {
+  const {userID,username} = req.body;
+  const token = req.headers.authorization?.split(" ")[1];
+  console.log(token);
   try {
-    const user = await UserModel.findOne({ email });
-    if (user) {
-      bcrypt.compare(password, user.password, function (err, result) {
-        if (err) {
-          res.status(201).send({ error: err.message });
-        }
-        // result == true
-        if (result) {
-          const token = jwt.sign(
-            { userID: user._id, username: user.username },
-            process.env.secretKey,
-            {
-              expiresIn: "7d",
-            }
-          );
-
-          const refresh_token = jwt.sign(
-            { email: email },
-            process.env.REFRESH_TOKEN_SECRET,
-            { expiresIn: "28d" }
-          );
-
-          res.status(201).send({
-            msg: "User Logged in Successfully",
-            token: token,
-            refresh_token,
-          });
-        } else {
-          res.status(201).send({ msg: "Wrong Password!" });
-        }
-      });
-    } else {
-      res.status(201).send({
-        msg: "User does not exist, Please Register!",
+    if (!token) {
+      return res.status(400).send({
+        error: "Token not provided",
       });
     }
-  } catch (error) {
-    res.status(401).send({ error: error.message });
-  }
-};
-
-const handleLogout = async (req, res) => {
-  const token = req.headers.authorization?.split(" ")[1];
-  try {
-    const blackToken = new BlacklistModel({ token });
+    const blackToken = new BlacklistModel({ token,userID,username });
     await blackToken.save();
     res.status(201).send({
       msg: "User Logout successfully",
     });
   } catch (error) {
-    res.status(401).send({ error: error.message });
+    // Handle specific errors if needed
+    if (error.name === "MongoError" && error.code === 11000) {
+      return res.status(400).send({
+        error: "Token already blacklisted",
+      });
+    }
+    // Handle other errors
+    res.status(500).send({ error: error.message });
   }
 };
 

@@ -12,7 +12,7 @@ const handleCreateNote = async (req, res) => {
 
 const handleAllNote = async (req, res) => {
   try {
-    const notes = await NoteModel.find();
+    const notes = await NoteModel.find({ userID: req.body.userID });
     res.status(201).send({ notes });
   } catch (error) {
     res.status(401).send({ error: error.message });
@@ -22,8 +22,16 @@ const handleAllNote = async (req, res) => {
 const handleUpdateNote = async (req, res) => {
   const { noteID } = req.params;
   try {
-    const note = await NoteModel.findByIdAndUpdate({ _id: noteID }, req.body);
-    res.status(201).send({ msg: `Note Updated ID:${noteID}` });
+    const note = await NoteModel.findOne({ _id: noteID });
+    if (req.body.userID === note.userID) {
+      const updateNote = await NoteModel.findByIdAndUpdate(
+        { _id: noteID },
+        req.body
+      );
+      res.status(201).send({ msg: `Note Updated ID:${noteID}` });
+    } else {
+      return res.status(401).send({ msg: "Not Authorized" });
+    }
   } catch (error) {
     res.status(401).send({ error: error.message });
   }
@@ -32,8 +40,13 @@ const handleUpdateNote = async (req, res) => {
 const handleDeleteNote = async (req, res) => {
   const { noteID } = req.params;
   try {
-    await NoteModel.findByIdAndDelete({ _id: noteID });
-    res.status(201).send({ msg: `Note Deleted ${noteID}` });
+    const note = await NoteModel.findOne({ _id: noteID });
+    if (req.body.userID === note.userID) {
+      const updateNote = await NoteModel.findByIdAndDelete({ _id: noteID });
+      res.status(201).send({ msg: `Note Deleted ID:${noteID}` });
+    } else {
+      return res.status(401).send({ msg: "Not Authorized" });
+    }
   } catch (error) {
     res.status(401).send({ error: error.message });
   }

@@ -14,10 +14,10 @@ const {
 const userRouter = express.Router(); //inbuilt middleware  of express for routing
 
 userRouter.post("/register", handleCreateNewUser);
-userRouter.use(auth);
-
 userRouter.post("/login", handleLogin);
-userRouter.get("/logout",  handleLogout);
+
+userRouter.use(auth);
+userRouter.post("/logout",  handleLogout);
 
 userRouter.get("/", handleGetAllUsers);
 userRouter
