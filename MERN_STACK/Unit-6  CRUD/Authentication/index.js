@@ -6,7 +6,7 @@ const { connection } = require("./db");
 const { userRouter } = require("./routes/user.routes");
 const { noteRouter } = require("./routes/note.routes");
 
-const PORT = process.env.SERVER_PORT;
+const PORT = process.env.SERVER_PORT | 3000;
 
 const app = express();
 app.use(express.json());
@@ -33,9 +33,9 @@ app.get("/series", auth, (req, res) => {
 
 app.get("/refresh", (req, res) => {
   const refresh_token = req.headers.authorization?.split(" ")[1];
-  const decoded = jwt.verify(refresh_token, process.env.REFRESH_TOKEN_SECRET);
+  const decoded = jwt.verify(refresh_token, "anything");
   if (decoded) {
-    const token = jwt.sign({ email: decoded.email }, process.env.secretKey, {
+    const token = jwt.sign({ email: decoded.email }, "masai", {
       expiresIn: "7d",
     });
     res.send(token);
