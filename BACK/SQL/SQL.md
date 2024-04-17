@@ -78,8 +78,6 @@ VALUES
 (4, 'Jam', 42, 'Mumbai', 12000);
 ```
 
-
-
 # SQLite
 
 Some of the main differences between a SQL and NoSQL databases are:
@@ -94,8 +92,8 @@ INSERT into users (id, name, age, is_admin) values (1, 'John Doe', 27, false);
 INSERT into users (id, name, age, is_admin) values (2, 'Sally Rae', 18, true);
 ```
 
-
-1. SELECT id from users;
-2. SELECT id, name from users;
-3. SELECT * from users;
-4. 
+```
+ SELECT id from users;
+ SELECT id, name from users;
+ SELECT * from users;
+```
