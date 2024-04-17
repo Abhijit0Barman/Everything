@@ -32,7 +32,9 @@
 
 ## SQL-Query's
 
-`CREATE DATABASE databaseName`
+```
+CREATE DATABASE databaseName
+```
 
 ```
 CREATE TABLE customer
@@ -53,4 +55,25 @@ ORDER BY "ID" ASC
 ```
 SELECT * FROM public.customer
 ORDER BY "ID" ASC LIMIT 100
+```
+
+```
+CREATE TABLE public.cust
+(
+    custid integer NOT NULL,
+    custname "char" NOT NULL,
+    address character varying(150),
+    sal numeric,
+    PRIMARY KEY (custid)
+);
+```
+
+```
+INSERT INTO customer
+(CustID, CustName, Age, City, Salary)
+VALUES
+(1, 'Sam', 26, 'Delhi', 9000),
+(2, 'Ram', 19, 'Bangalore', 10000),
+(3, 'Pam', 31, 'Kolkata', 11000),
+(4, 'Jam', 42, 'Mumbai', 12000);
 ```
