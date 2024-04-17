@@ -30,7 +30,7 @@
 
 ---
 
-## SQL-Query's
+## PostgreSQL
 
 ```
 CREATE DATABASE databaseName
@@ -77,3 +77,25 @@ VALUES
 (3, 'Pam', 31, 'Kolkata', 11000),
 (4, 'Jam', 42, 'Mumbai', 12000);
 ```
+
+
+
+# SQLite
+
+Some of the main differences between a SQL and NoSQL databases are:
+
+NoSQL databases are usually non-relational, SQL databases are usually relational (we'll talk more about what this means later).
+SQL databases usually have a defined schema, NoSQL databases usually have dynamic schema.
+SQL databases are table-based, NoSQL databases have a variety of different storage methods, such as document, key-value, graph, wide-column, and more.
+
+```
+CREATE TABLE users (id INTEGER, name TEXT, age INTEGER, is_admin BOOLEAN);
+INSERT into users (id, name, age, is_admin) values (1, 'John Doe', 27, false);
+INSERT into users (id, name, age, is_admin) values (2, 'Sally Rae', 18, true);
+```
+
+
+1. SELECT id from users;
+2. SELECT id, name from users;
+3. SELECT * from users;
+4. 
