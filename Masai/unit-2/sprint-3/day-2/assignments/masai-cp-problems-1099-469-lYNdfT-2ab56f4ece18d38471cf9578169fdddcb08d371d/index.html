@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Employee Records</title>
+  </head>
+  <body>
+    <!-- Use this form for taking the inputs  -->
+    <form>
+      <input placeholder="Name" type="text" id="name" />
+      <input placeholder="Employee ID" type="text" id="employee_id" />
+      <select id="department">
+        <option value="">Select Department</option>
+        <option value="HR">HR</option>
+        <option value="Finance">Finance</option>
+        <option value="Engineering">Engineering</option>
+      </select>
+      <input placeholder="Experience" type="number" id="experience" />
+      <input placeholder="Email" type="email" id="email" />
+      <input placeholder="Mobile No." type="number" id="mobile" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Use this select tag for filtering  -->
+    <select id="filter">
+      <option value="">Select Department</option>
+      <option value="HR">HR</option>
+      <option value="Finance">Finance</option>
+      <option value="Engineering">Engineering</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Employee ID</th>
+          <th>Department</th>
+          <th>Experience in Years</th>
+          <th>Email</th>
+          <th>Mobile No</th>
+          <th>Role</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Append Rows here using JS & DOM  -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+
+const myForm=document.querySelector("form");
+
+const nam=document.querySelector("#name");
+const emp=document.querySelector("#employee_id");
+const dp=document.querySelector("#department");
+const xp=document.querySelector("#experience");
+const mail=document.querySelector("#email");
+const mobile=document.querySelector("#mobile");
+
+const tbody=document.querySelector("tbody");
+
+const filter = document.querySelector("#filter");
+
+filter.addEventListener("change", function(){
+  if(element.value === ""){
+    Display(Global);
+  }
+  else
+  {
+
+  }
+
+})
+
+let Global=[];
+
+myForm.addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const DATA={
+    name:nam.value,
+    employee_id:emp.value,
+    department:dp.value,
+    experience:xp.value,
+    email:mail.value,
+    mobile:mobile.value,
+  };
+  // console.log(DATA);
+  Global.push(DATA);
+  // console.log(Global)
+  Display(Global);
+
+  function Display(data){
+    tbody.innerHTML=null;
+    for(let i=0;i<data.length;i++){
+      const tr=document.createElement("tr");
+      const td1=document.createElement("td");
+      const td2=document.createElement("td");
+      const td3=document.createElement("td");
+      const td4=document.createElement("td");
+      const td5=document.createElement("td");
+      const td6=document.createElement("td");
+      const td7=document.createElement("td");
+      const td8=document.createElement("td");
+
+      tr.append(td1,td2,td3,td4,td5,td6,td7,td8);
+      tbody.append(tr);
+
+      td1.innerText=data[i].name;
+      td2.innerText=data[i].employee_id;
+      td3.innerText=data[i].department;
+      td4.innerText=data[i].experience;
+      td5.innerText=data[i].email;
+      td6.innerText=data[i].mobile;
+      td7.innerText=role(data[i].experience);
+      td8.innerText="delete";
+      td8.addEventListener("click", function(){
+           
+      })
+    }
+  }
+
+    
+})
+
+function role(num){
+  if(5<num){
+    return "Senior";
+  }else if(5>=num && 2<=num){
+    return "Junior";
+  }else{
+    return "Fresher";
+  }
+}
+
+  </script>
+</html>

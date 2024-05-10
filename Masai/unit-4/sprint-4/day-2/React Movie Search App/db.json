@@ -1,0 +1,39 @@
+{
+  "movies": [
+      {
+        "id": 1,
+        "title": "Superman",
+        "year": 2000
+      },
+      {
+        "id": 2,
+        "title": "Batman",
+        "year": 2002
+      },
+      {
+        "id": 3,
+        "title": "Ironman",
+        "year": 1999
+      },
+      {
+        "id": 4,
+        "title": "Wonder woman",
+        "year": 2005
+      },
+      {
+        "id": 5,
+        "title": "Sandman",
+        "year": 2020
+      },
+      {
+        "id": 6,
+        "title": "Aquaman",
+        "year": 2016
+      },
+      {
+        "id": 7,
+        "title": "Captain marvel",
+        "year": 2018
+      }
+    ]
+  }

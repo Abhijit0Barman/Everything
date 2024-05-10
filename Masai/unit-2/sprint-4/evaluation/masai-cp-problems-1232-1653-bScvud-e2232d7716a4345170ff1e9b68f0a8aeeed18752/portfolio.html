@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PORTFOLIO Page</title>
+  <style>
+    #navbar{
+      background-color: darkgoldenrod;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #navbar>a{
+      text-decoration: none;
+      font-weight: bolder;
+      font-size: 30px;
+      color: black;
+    }
+    #filter,table{
+      width: 80%;
+      margin: auto;
+    }
+    table{
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="navbar">
+    <h1>Stock Portfolio Management</h1>
+    <a href="./index.html">Home</a>
+    <a href="./portfolio.html">My Portfolio</a>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>COMPANY</th>
+        <th>COUNTRY</th>
+        <th>PRICE</th>
+        <th>SECTOR</th>
+        <th>INCREMENT</th>
+        <th>QUANTITY</th>
+        <th>DECREMENT</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Append rows here using DOM  -->
+    </tbody>
+  </table>
+</body>
+<script>
+  // All JS goes here 
+  let portfolioData = JSON.parse(localStorage.getItem("portfolio"))||[];
+  let tbody = document.querySelector("tbody");
+
+  function display(){
+    tbody.innerHTML="";
+    portfolioData.forEach((product)=>{
+      let tr = document.createElement("tr");
+      
+      let td1 = document.createElement("td");
+      let td2 = document.createElement("td");
+      let td3 = document.createElement("td");
+      let td4 = document.createElement("td");
+      let td5 = document.createElement("td");
+      let td6 = document.createElement("td");
+      let td7 = document.createElement("td");
+      let Delete = document.createElement("td");
+
+      td1.innerText = product.company_name;
+      td2.innerText = product.country;
+      td3.innerText = product.price;
+      td4.innerText = product.sector;
+
+      td5.innerText = "+";
+      td6.innerText = product.quantity;
+      td7.innerText = "-";
+      Delete.innerText = "Delete";
+
+      Delete.addEventListener("click",()=>{
+       let portfolioData = portfolioData.filter((ele)=>{
+          return ele.id !== product.id
+        });
+        localStorage.setItem("portfolio",JSON.stringify(portfolioData));
+        display();
+      });
+
+      td7.addEventListener("click",()=>{
+        if(product.quantity>1){
+          product.quantity--;
+          localStorage.setItem("portfolio",JSON.stringify("portfolioData"));
+          display();
+        }
+      })
+      td5.addEventListener("click",()=>{
+        product.quantity++;
+        localStorage.setItem("portfolio",JSON.stringify(portfolioData));
+        display();
+      })
+
+      tr.append(td1,td2,td3,td4,td5,td6,td7,Delete);
+      tbody.append(tr);
+    })
+  }
+  display();
+</script>
+
+</html>

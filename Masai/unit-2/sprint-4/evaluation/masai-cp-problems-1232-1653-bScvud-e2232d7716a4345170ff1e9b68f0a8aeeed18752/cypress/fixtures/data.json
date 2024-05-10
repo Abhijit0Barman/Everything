@@ -1,0 +1,253 @@
+{
+    "Initial": [
+        {
+            "id": 1,
+            "company_name": "Snaptags",
+            "country": "Russia",
+            "price": 2969,
+            "sector": "Capital Goods"
+        },
+        {
+            "id": 2,
+            "company_name": "Jayo",
+            "country": "Philippines",
+            "price": 4819,
+            "sector": "Health Care"
+        },
+        {
+            "id": 3,
+            "company_name": "Kayveo",
+            "country": "Honduras",
+            "price": 2704,
+            "sector": "Health Care"
+        },
+        {
+            "id": 4,
+            "company_name": "Thoughtmix",
+            "country": "United States",
+            "price": 929,
+            "sector": "Capital Goods"
+        },
+        {
+            "id": 5,
+            "company_name": "Brightbean",
+            "country": "Indonesia",
+            "price": 487,
+            "sector": "Finance"
+        },
+        {
+            "id": 6,
+            "company_name": "Topicblab",
+            "country": "Thailand",
+            "price": 2039,
+            "sector": "Health Care"
+        },
+        {
+            "id": 7,
+            "company_name": "Oba",
+            "country": "Indonesia",
+            "price": 4223,
+            "sector": "Health Care"
+        },
+        {
+            "id": 8,
+            "company_name": "Zoombox",
+            "country": "Democratic Republic of the Congo",
+            "price": 4919,
+            "sector": "Technology"
+        },
+        {
+            "id": 9,
+            "company_name": "Plajo",
+            "country": "Thailand",
+            "price": 3786,
+            "sector": "Finance"
+        },
+        {
+            "id": 10,
+            "company_name": "Tekfly",
+            "country": "China",
+            "price": 3299,
+            "sector": "Technology"
+        },
+        {
+            "id": 11,
+            "company_name": "Gabtype",
+            "country": "France",
+            "price": 4108,
+            "sector": "Miscellaneous"
+        },
+        {
+            "id": 12,
+            "company_name": "Dynazzy",
+            "country": "China",
+            "price": 3194,
+            "sector": "Consumer Durables"
+        },
+        {
+            "id": 13,
+            "company_name": "Meemm",
+            "country": "Palestinian Territory",
+            "price": 3059,
+            "sector": "Consumer Services"
+        },
+        {
+            "id": 14,
+            "company_name": "Devshare",
+            "country": "China",
+            "price": 3330,
+            "sector": "Technology"
+        },
+        {
+            "id": 15,
+            "company_name": "Jetpulse",
+            "country": "Iran",
+            "price": 3736,
+            "sector": "Basic Industries"
+        },
+        {
+            "id": 16,
+            "company_name": "Kayveo",
+            "country": "Lithuania",
+            "price": 3697,
+            "sector": "n/a"
+        },
+        {
+            "id": 17,
+            "company_name": "Flipstorm",
+            "country": "Uganda",
+            "price": 2585,
+            "sector": "Finance"
+        },
+        {
+            "id": 18,
+            "company_name": "Devpulse",
+            "country": "China",
+            "price": 182,
+            "sector": "Consumer Non-Durables"
+        },
+        {
+            "id": 19,
+            "company_name": "Skyba",
+            "country": "China",
+            "price": 975,
+            "sector": "Finance"
+        },
+        {
+            "id": 20,
+            "company_name": "Zoomzone",
+            "country": "Norway",
+            "price": 3061,
+            "sector": "Capital Goods"
+        },
+        {
+            "id": 21,
+            "company_name": "Digitube",
+            "country": "Jamaica",
+            "price": 1565,
+            "sector": "Consumer Services"
+        },
+        {
+            "id": 22,
+            "company_name": "Yotz",
+            "country": "Japan",
+            "price": 854,
+            "sector": "Capital Goods"
+        },
+        {
+            "id": 23,
+            "company_name": "Fatz",
+            "country": "Czech Republic",
+            "price": 3868,
+            "sector": "Consumer Services"
+        },
+        {
+            "id": 24,
+            "company_name": "Thoughtblab",
+            "country": "Argentina",
+            "price": 698,
+            "sector": "Basic Industries"
+        },
+        {
+            "id": 25,
+            "company_name": "Plajo",
+            "country": "Poland",
+            "price": 3350,
+            "sector": "Capital Goods"
+        },
+        {
+            "id": 26,
+            "company_name": "Quinu",
+            "country": "Philippines",
+            "price": 1460,
+            "sector": "Health Care"
+        },
+        {
+            "id": 27,
+            "company_name": "Talane",
+            "country": "China",
+            "price": 4804,
+            "sector": "n/a"
+        },
+        {
+            "id": 28,
+            "company_name": "Kamba",
+            "country": "Russia",
+            "price": 4044,
+            "sector": "n/a"
+        },
+        {
+            "id": 29,
+            "company_name": "Mybuzz",
+            "country": "South Africa",
+            "price": 2497,
+            "sector": "Consumer Services"
+        },
+        {
+            "id": 30,
+            "company_name": "Npath",
+            "country": "Sierra Leone",
+            "price": 4741,
+            "sector": "Capital Goods"
+        }
+    ],
+    "price5001000": [
+        {
+            "id": 4,
+            "company_name": "Thoughtmix",
+            "country": "United States",
+            "price": 929,
+            "sector": "Capital Goods"
+        },
+        {
+            "id": 19,
+            "company_name": "Skyba",
+            "country": "China",
+            "price": 975,
+            "sector": "Finance"
+        },
+        {
+            "id": 22,
+            "company_name": "Yotz",
+            "country": "Japan",
+            "price": 854,
+            "sector": "Capital Goods"
+        },
+        {
+            "id": 24,
+            "company_name": "Thoughtblab",
+            "country": "Argentina",
+            "price": 698,
+            "sector": "Basic Industries"
+        }
+    ],
+    "price15002000": [
+        {
+            "id": 21,
+            "company_name": "Digitube",
+            "country": "Jamaica",
+            "price": 1565,
+            "sector": "Consumer Services"
+        }
+    ]
+}

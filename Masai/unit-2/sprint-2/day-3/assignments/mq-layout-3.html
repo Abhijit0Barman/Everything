@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQ LAYOUT 3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .nav{
+            width: 90%;
+            margin: auto;
+            height: 100px;
+            background-color: #f7ff00;
+            color: black;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            text-align: left;
+        }
+        p{
+            padding-left: 20px;
+            font-size: 50px;
+            font-weight: bolder;
+        }
+        .grid{
+            display: grid;
+            width: 90%;
+            margin: auto;
+            grid-auto-rows: 100px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            grid-template-areas: "one one two"
+                                "one one three"
+                                "one one four";
+
+        }
+        .grid>div:nth-child(1){
+            background-color: #ff0000;
+            grid-area: one;
+        }
+        .grid>div:nth-child(2){
+            background-color: #02ff2a;
+            grid-area: two;
+        }
+        .grid>div:nth-child(3){
+            background-color: #02ff2a;
+            grid-area: three;
+        }
+        .grid>div:nth-child(4){
+            background-color: #02ff2a;
+            grid-area: four;
+        }
+        .grid p{
+            padding-left: 10px;
+            font-size: 19px;
+            font-weight: bolder;
+            color: #5a595a;
+        }
+        @media only screen and (min-width:500px) and (max-width:800px) {
+            .grid{
+                grid-template-areas: "one one one"
+                                "one one one"
+                                "two three four";
+            }
+        }
+        @media only screen and (max-width:499px) {
+            .grid{
+                grid-template-areas: "one one one"
+                                     "one one one"
+                                    "two two two"
+                                    "three three three"
+                                    "four four four";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <p>Navigation</p>
+    </div>
+    <div class="grid">
+        <div class="left"> <p>LEFT BOX</p> </div>
+        <div class="r1"> <p>RIGHT BOX 1</p> </div>
+        <div class="r2"> <p>RIGHT BOX 2</p> </div>
+        <div class="r3"> <p>RIGHT BOX 3</p> </div>
+    </div>
+    
+</body>
+</html>

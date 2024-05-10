@@ -1,0 +1,72 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Abram Langtry",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 1,
+      "salary": "00001111"
+    },
+    {
+      "name": "abhijit",
+      "image": "/images/avatar/avatar2.jpeg",
+      "department": "55",
+      "salary": "66666",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Giorgio Antonioni",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 3,
+      "salary": 95000
+    },
+    {
+      "name": "Himanshu",
+      "image": "/images/avatar/avatar2.jpeg",
+      "department": 4,
+      "salary": 100000,
+      "createdAt": 1670325954162,
+      "id": "tEYFrHNsdO"
+    },
+    {
+      "name": "John Doe",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 1,
+      "salary": 80000,
+      "id": "R4dvtugCT2"
+    },
+    {
+      "name": "gop",
+      "image": "/images/avatar/avatar2.jpeg",
+      "department": "333",
+      "salary": "333",
+      "createdAt": 1682254363926,
+      "id": "pzLSrISrCH"
+    },
+    {
+      "name": "gop",
+      "image": "/images/avatar/avatar2.jpeg",
+      "department": "333",
+      "salary": "333",
+      "createdAt": 1682254370465,
+      "id": "w19YW8Xn53"
+    },
+    {
+      "name": "dfgvdfs",
+      "image": "",
+      "department": "5",
+      "salary": "-1",
+      "createdAt": 1682258568404,
+      "id": "gUCWqaqUry"
+    },
+    {
+      "name": "ndf",
+      "image": "jndfsd",
+      "department": "15641",
+      "salary": "99887766",
+      "createdAt": 1682258934826,
+      "id": "tTf2uEZjm9"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .outer{
+            /* border: 1px solid red; */
+            height: 500px;
+        }
+        .inner{
+            /* border: 1px solid rgb(12, 255, 7); */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            width: 500px;
+            height: 90%;
+            margin: auto;
+            padding-bottom: 450px;
+            padding-top: 5%;
+        }
+        .number{
+            /* border: 1px solid rgb(0, 4, 0); */
+            height: 75px;
+            margin-top: 10px;
+            
+        }
+        input{
+            display: block;
+            width: 290px;
+            margin: auto;
+            height: 70px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            /* border: 1px solid blue; */
+        }
+        .inner *{
+            text-align: center;
+        }
+        button{
+            width: 70px;
+            height: 70px;
+            font-size: xx-large;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border: none;
+            background-color: rgb(255, 255, 255);
+        }
+        h1{
+            text-align: center;
+            color: #008080;
+            font-size: 50px;
+        }
+        .red{
+            background-color: #fe0100;
+            color: rgb(255, 255, 255);
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        /* .inner>div>button:nth-child(4){
+            background-color: black;
+            color: rgb(255, 255, 255);
+        } */
+        .black{
+            background-color: black;
+            color: rgb(255, 255, 255);
+        }
+        button:hover{
+            background-color: rgb(0, 174, 9);
+            color: rgb(21, 0, 255);
+        }
+        input:focus{
+            background-color: #fefe00;
+            font-weight: bolder;
+            font-size: larger;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <h1>Masai Calculator</h1>
+        <div class="inner">
+            <input type="number">
+            <div class="number">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="black">+</button>
+            </div>
+            <div class="number">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button class="black">-</button>
+            </div>
+            <div class="number">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="black">x</button>
+            </div>
+            <div class="number">
+                <button class="red">c</button>
+                <button>0</button>
+                <button class="black">=</button>
+                <button class="black">/</button>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>

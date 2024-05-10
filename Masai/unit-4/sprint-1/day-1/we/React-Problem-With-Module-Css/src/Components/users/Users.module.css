@@ -1,0 +1,11 @@
+.container{
+    border: 1px solid teal;
+    padding: 10px;
+    margin: 10px;
+}
+.heading{
+    color: teal;
+}
+.container img{
+    border-radius: 50%;
+}

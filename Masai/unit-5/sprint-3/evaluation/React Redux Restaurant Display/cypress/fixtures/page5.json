@@ -1,0 +1,83 @@
+[
+    {
+        "id": 37,
+        "name": "Leckenby",
+        "type": "ethnic",
+        "rating": 4.5,
+        "number_of_votes": 711,
+        "price_starts_from": 360,
+        "image": "https://picsum.photos/200"
+    },
+    {
+        "id": 38,
+        "name": "Jost",
+        "type": "fast_food",
+        "rating": 4.5,
+        "number_of_votes": 865,
+        "price_starts_from": 500,
+        "image": "https://picsum.photos/200"
+    },
+    {
+        "id": 39,
+        "name": "Risbrough",
+        "type": "fine_dining",
+        "rating": 5,
+        "number_of_votes": 863,
+        "price_starts_from": 1450,
+        "image": "https://picsum.photos/200"
+    },
+    {
+        "id": 40,
+        "name": "Wardingly",
+        "type": "fine_dining",
+        "rating": 1.5,
+        "number_of_votes": 611,
+        "price_starts_from": 475,
+        "image": "https://picsum.photos/200"
+    },
+    {
+        "id": 41,
+        "name": "Simanenko",
+        "type": "fast_food",
+        "rating": 2.5,
+        "number_of_votes": 476,
+        "price_starts_from": 210,
+        "image": "https://picsum.photos/200"
+    },
+    {
+        "id": 42,
+        "name": "Cudd",
+        "type": "fast_food",
+        "rating": 3.5,
+        "number_of_votes": 540,
+        "price_starts_from": 400,
+        "image": "https://picsum.photos/200"
+    },
+    {
+        "id": 43,
+        "name": "Klein",
+        "type": "casual_dining",
+        "rating": 3.5,
+        "number_of_votes": 274,
+        "price_starts_from": 325,
+        "image": "https://picsum.photos/200"
+    },
+    {
+        "id": 44,
+        "name": "Doche",
+        "type": "ethnic",
+        "rating": 5,
+        "number_of_votes": 903,
+        "price_starts_from": 275,
+        "image": "https://picsum.photos/200"
+    },
+    {
+        "id": 45,
+        "name": "Nannizzi",
+        "type": "cafe",
+        "rating": 3.5,
+        "number_of_votes": 436,
+        "price_starts_from": 100,
+        "image": "https://picsum.photos/200"
+    }
+]

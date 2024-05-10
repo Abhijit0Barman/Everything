@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puppy App</title>
+  </head>
+  <body>
+    <img
+      src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHVwcHl8ZW58MHx8MHx8&auto=format&fit=crop&w=400&q=60"
+      alt=""
+    />
+    <h1 id="like">0</h1>
+    <h1 id="dislike">0</h1>
+    <button id="likebtn">Like</button>
+    <button id="dislikebtn">Dislike</button>
+  </body>
+  <script>
+    const likeDisplay = document.querySelector("#like");
+    const dislikeDisplay = document.querySelector("#dislike");
+
+    const likebtn = document.querySelector("#likebtn");
+    const dislikebtn = document.querySelector("#dislikebtn");
+
+    let likes = localStorage.getItem("likes");
+    let dislikes = localStorage.getItem("dislikes");
+
+    // likes === null ? likes = 0 : likes = +(likes);
+
+    if (likes === null) {
+      likes = 0;
+    } else {
+      likes = +likes;
+    }
+
+    if (dislikes === null) {
+      dislikes = 0;
+    } else {
+      dislikes = Number(dislikes);
+    }
+
+    likeDisplay.innerText = likes;
+    dislikeDisplay.innerText = dislikes;
+
+    likebtn.addEventListener("click", () => {
+      likes++;
+      likeDisplay.innerText = likes;
+      localStorage.setItem("likes", likes);
+    });
+
+    dislikebtn.addEventListener("click", () => {
+      dislikes++;
+      dislikeDisplay.innerText = dislikes;
+      localStorage.setItem("dislikes", dislikes);
+    });
+  </script>
+</html>

@@ -1,0 +1,55 @@
+{
+    "todos": [
+      {
+        "id": 1,
+        "status": true,
+        "title": "Learn HTML"
+      },
+      {
+        "id": 2,
+        "status": true,
+        "title": "Learn Java"
+      },
+      {
+        "id": 3,
+        "status": true,
+        "title": "Learn C++"
+      },
+      {
+        "id": 4,
+        "status": false,
+        "title": "Learn Ruby"
+      },
+      {
+        "id": 5,
+        "status": true,
+        "title": "Learn PHP"
+      },
+      {
+        "id": 6,
+        "status": false,
+        "title": "Learn Swift"
+      },
+      {
+        "id": 7,
+        "status": true,
+        "title": "Learn Kotlin"
+      },
+      {
+        "id": 8,
+        "status": false,
+        "title": "Learn TypeScript"
+      },
+      {
+        "id": 9,
+        "status": true,
+        "title": "Learn React"
+      },
+      {
+        "id": 10,
+        "status": false,
+        "title": "Learn Angular"
+      }
+    ]
+  }
+  

@@ -1,0 +1,10 @@
+form>label>input{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  form>label{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+  }

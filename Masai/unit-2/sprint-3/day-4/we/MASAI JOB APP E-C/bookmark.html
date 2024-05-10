@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admitted</title>
+  <link rel="stylesheet" href="commonStyles.css" />
+</head>
+
+<body>
+  <div id="links">
+    <div><a href="index.html">Home</a></div>
+    <div><a href="applied.html">Applied Jobs</a></div>
+    <div><a href="bookmark.html">Bookmarks</a></div>
+  </div>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Job Applied</th>
+        </tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+  </main>
+</body>
+<script>
+  //you need to code here
+  let bookLS = localStorage.getItem("bookmark");
+  const tbody = document.querySelector("tbody");
+
+  if (bookLS === null) {
+    bookLS = []
+  } else {
+    bookLS = JSON.parse(bookLS);
+  }
+  DisplayTable(bookLS);
+  function DisplayTable(data) {
+    tbody.innerHTML = null;
+    for (let i = 0; i < data.length; i++) {
+      const tr = document.createElement("tr");
+
+      const td1 = document.createElement("td");
+      const td2 = document.createElement("td");
+      const td3 = document.createElement("td");
+
+      td1.innerText = data[i].name;
+      td2.innerText = data[i].email;
+      td3.innerText = data[i].role;
+
+      tr.append(td1, td2, td3);
+      tbody.append(tr);
+    }
+  }
+</script>
+
+</html>

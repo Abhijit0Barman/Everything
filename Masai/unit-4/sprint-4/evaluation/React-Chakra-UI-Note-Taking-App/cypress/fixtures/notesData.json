@@ -1,0 +1,52 @@
+{
+  "notes": [
+    {
+      "id": 2,
+      "title": "Grocery Shopping",
+      "description": "Buy milk, eggs, and bread",
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "title": "Exercise",
+      "description": "Go for a run in the park",
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "title": "Book Club",
+      "description": "Read chapters 5-10",
+      "status": "in_progress"
+    },
+    {
+      "id": 5,
+      "title": "Birthday Party",
+      "description": "Buy a gift for Sarah",
+      "status": "completed"
+    },
+    {
+      "id": 6,
+      "title": "Vacation Planning For Summer",
+      "description": "Research hotels and flights",
+      "status": "in_progress"
+    },
+    {
+      "id": 7,
+      "title": "Home Repairs",
+      "description": "Fix leaking faucet",
+      "status": "pending"
+    },
+    {
+      "id": 9,
+      "title": "Movie Night",
+      "description": "Watch new release at the cinema",
+      "status": "pending"
+    },
+    {
+      "id": 10,
+      "title": "Project Deadline",
+      "description": "Submit final report",
+      "status": "completed"
+    }
+  ]
+}

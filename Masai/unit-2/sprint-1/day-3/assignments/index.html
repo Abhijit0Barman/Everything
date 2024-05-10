@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Periodic Table</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        /* margin: auto; */
+      }
+      #outer {
+        display: flex;
+      }
+      #outer1 {
+        display: flex;
+        /* border: 1px solid red; */
+        /* margin-left: 600px; */
+      }
+
+      .bottom {
+        /* border: 1px2 solid green; */
+        margin-top: 62px;
+      }
+      .box {
+        background-color: rgb(72, 88, 46);
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        /* padding: 10px; */
+        /* margin: 10px; */
+        line-height: 50px;
+      }
+      .box1 {
+        background-color: rgb(72, 88, 46);
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        /* padding: 10px; */
+        margin: 10px;
+        line-height: 50px;
+      }
+      div + .box {
+        background-color: rgb(149, 188, 95);
+      }
+      #lower {
+        display: flex;
+        /* margin-left: 280px; */
+        margin: 0px 0px 0px 280px;
+        /* border: 1px solid black; */
+      }
+      h1 {
+        margin-left: 280px;
+      }
+      .red {
+        color: rgb(255, 255, 255);
+        background-color: rgb(170, 0, 0);
+        text-align: center;
+        font-size: xx-large;
+      }
+      .green {
+        background-color: #95bc5f;
+      }
+      .pinky {
+        font-size: xx-large;
+        background-color: #ff5555;
+        text-align: center;
+      }
+      .third {
+        margin-top: 300px;
+        /* background-color: white; */
+        display: block;
+      }
+      .white {
+        background-color: #ffe6d5;
+        border: 6px solid black;
+      }
+      .fourth > div {
+        background-color: #0001fe;
+      }
+      .fourth {
+        margin-top: 180px;
+      }
+      .multicolor > .box1:nth-child(1){
+        background-color: #aa0087;
+      }
+      .multicolor > .box1:nth-child(2){
+        background-color: #ff6600;
+      }
+      .multicolor > .box1:nth-child(3){
+        background-color: #ff6600;
+      }
+      .multicolor > .box1:nth-child(4){
+        background-color: #ff6600;
+      }
+      .multicolor > .box1:nth-child(5){
+        background-color: #ff6600;
+      }
+      .multicolor > .box1:nth-child(6){
+        background-color: #6d535d;
+      }
+      .last>div{
+        background-color: #ffcc02;
+      }
+      .last div:nth-child(7){
+        background-color:#6d535d;
+      }
+      .multi>div:nth-child(1){
+        background-color: #95bc5f;
+      }
+      .multi>div:nth-child(2){
+        background-color: #aa0087;
+      }
+      .multi>div:nth-child(3){
+        background-color: #aa0087;
+      }
+      .multi>div:nth-child(4){
+        background-color: #ff6600;
+      }
+      .multi>div:nth-child(5){
+        background-color: #ff6600;
+      }
+      .multi>div:nth-child(6){
+        background-color:#6d535d;
+      }
+      .multi1>div:nth-child(1){
+        background-color: #95bc5f;
+      }
+      .multi1>div:nth-child(2){
+        background-color: #95bc5f;
+      }
+      .multi1>div:nth-child(3){
+        background-color: #aa0087;
+      }
+      .multi1>div:nth-child(4){
+        background-color: #aa0087;
+      }
+      .multi1>div:nth-child(5){
+        background-color: #ff6600;
+      }
+      .multi1>div:nth-child(6){
+        background-color:#6d535d;
+      }
+      .multi4 .box1:nth-child(1){
+        background-color: #95bc5f;
+      }
+      .multi4>.box1:nth-child(2){
+        background-color: #95bc5f;
+      }
+      .multi4 .box1:nth-child(3){
+        background-color: #95bc5f;
+      }
+      .multi4 .box1:nth-child(4){
+        background-color: #aa0087;
+      }
+      .multi4 .box1:nth-child(5){
+        background-color: #aa0087;
+      }
+      .multi4 .box1:nth-child(6){
+        background-color:#6d535d;
+      }
+      .multi5>div{
+        background-color: #ff0066;
+      }
+      .multi5>div:nth-child(6){
+        background-color:#6d535d;
+      }
+      .big{
+        background-color: #95bc5f;
+        border: 1px solid rgb(0, 0, 0);
+        width: 150px;
+        height: 150px;
+        margin: 17px 0px 0px 210px;
+        /* padding-top: 50px; */
+        position:absolute;
+      }
+      .top{
+        text-align: right;
+        padding-right: 10px;
+        padding-top: 10px;
+        /* border: 1px solid red; */
+      }
+      .mid{
+        /* text-align: center; */
+        /* border: 1px solid red; */
+        font-size: 70px;
+        padding-left: 6px;
+      }
+      .bot{
+        /* padding-top: 60px; */
+        padding-left: 5px;
+        font-size: x-large;
+        font-weight: bolder;
+        /* border: 1px solid red; */
+      }
+      
+      
+      </style>
+  </head>
+  <body>
+    <!-- <p class="mid">Si</p> -->
+    <h1>THE PERIODIC TABLE OF ELEMENTS</h1>
+    <!-- <p class="top">14</p> -->
+    <div class="big">
+     <div class="top">14</div>
+     <div class="mid">Si</div>
+     <div class="bot">Silicon</div>
+    </div>
+    <div id="outer1">
+      <div class="bottom1">
+        <div class="box1 red">H</div>
+        <div class="box1 green"></div>
+        <div class="box1 green"></div>
+        <div class="box1 green"></div>
+        <div class="box1 green"></div>
+        <div class="box1 green"></div>
+        <div class="box1 green"></div>
+      </div>
+      <div class="bottom">
+        <div class="box1 pinky">4</div>
+        <div class="box1 pinky">12</div>
+        <div class="box1 pinky">20</div>
+        <div class="box1 pinky">38</div>
+        <div class="box1 pinky">56</div>
+        <div class="box1 pinky">88</div>
+      </div>
+      <div class="third">
+        <div class="box1 white"></div>
+        <div class="box1 white"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="fourth">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="bottom multicolor">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="bottom multi">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="bottom multi1">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="bottom multi4">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="bottom multi5">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+      <div class="bottom1 last">
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+      </div>
+     
+    </div>
+
+    <div id="lower">
+      <div class="bottom">
+        <div class="box" style="color: aliceblue">La</div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div style="text-align: center" class="box">Am</div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="bottom">
+        <div class="box"></div>
+        <div class="box">No</div>
+      </div>
+    </div>
+  </body>
+</html>

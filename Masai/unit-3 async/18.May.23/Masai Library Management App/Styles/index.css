@@ -1,0 +1,20 @@
+#navbar {
+  text-align: center;
+}
+#navbar > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+#create > h1 {
+  text-align: center;
+}
+form {
+  text-align: center;
+  margin: auto;
+  /* border: 2px solid red; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-between;
+}

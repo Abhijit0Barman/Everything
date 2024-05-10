@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce</title>
+    <style>
+        #container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        #container img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="./we.html">Home</a>
+        <a href="cart.html">Cart</a>
+    </div>
+    <select id="filter">
+        <option value="">Select Category</option>
+        <option value="men's clothing">men's clothing</option>
+        <option value="jewelery">jewelery</option>
+        <option value="electronics">electronics</option>
+    </select>
+    <div id="container"></div>
+</body>
+<script>
+
+    let container = document.getElementById("container");
+    let filter = document.getElementById("filter");
+    const API = "https://fakestoreapi.com/products";
+
+    let LSData = localStorage.getItem("masai-ecomm");
+
+    if (LSData === null) {
+        LSData = [];
+    } else {
+        LSData = JSON.parse(LSData);
+    }
+
+    const response = fetch(API);
+
+    let fetchedData = [];
+    response.then(function (res) {
+        return res.json();
+    })
+        .then(function (data) {
+            DisplayProducts(data);
+            fetchedData = data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+
+    filter.addEventListener("change", function () {
+        if (filter.value === "") {
+            DisplayProducts(fetchedData);
+        } else {
+            let filtered = fetchedData.filter(function (element) {
+                if (element.category === filter.value) {
+                    return true;
+                } else {
+                    return false;
+                }
+            })
+            DisplayProducts(filtered);
+            console.log(filtered);
+        }
+    })
+    // data -> API Data(Array of Objects)
+    function DisplayProducts(data) {
+        container.innerHTML = "";
+        data.forEach(function (element) {
+            let product = document.createElement("div");
+
+            let image = document.createElement("img");
+            let title = document.createElement("h2");
+            let description = document.createElement("p");
+            let price = document.createElement("h4");
+            let category = document.createElement("p");
+            let addToCart = document.createElement("button");
+
+            image.setAttribute("src", element.image);
+            title.innerText = element.title;
+            description.innerText = element.description;
+            price.innerText = element.price;
+            category.innerText = element.category;
+
+            addToCart.innerText = "Add To Cart";
+
+            addToCart.addEventListener("click", function () {
+                LSData.push(element);
+                localStorage.setItem("masai-ecomm", JSON.stringify(LSData));
+            })
+            product.append(image, title, description, price, category, addToCart);
+            container.append(product);
+        })
+    }
+
+</script>
+
+</html>
+
+<!-- <div>
+    <img src="" alt="">
+    <h2>Title</h2>
+    <p>Description</p>
+    <h4>Price</h4>
+    <p>Category</p>
+</div> -->

@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "name": "T shirt",
+      "image": "https://picsum.photos/200",
+      "brand": "Puma",
+      "price": 456,
+      "category": "topwear",
+      "gender": "female",
+      "id": 1
+    },
+    {
+      "name": "Shirt",
+      "image": "https://picsum.photos/200",
+      "brand": "Bata",
+      "price": 666,
+      "category": "bottomwear",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "name": "Shirt",
+      "image": "https://picsum.photos/200",
+      "brand": "Roadster",
+      "price": 666,
+      "category": "footwear",
+      "gender": "kids",
+      "id": 3
+    }
+  ]
+}

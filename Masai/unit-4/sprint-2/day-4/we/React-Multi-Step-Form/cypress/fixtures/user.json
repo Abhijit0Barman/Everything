@@ -1,0 +1,14 @@
+{
+    "email": "user@example.com",
+    "password": "Masai@13#",
+    "confirmedPassword": "Masai@13#",
+    "education": "B.Tech",
+    "passingYear": "2022-01",
+    "birthDate": "2022-01-13",
+    "firstName": "raj",
+    "lastName": "kumar",
+    "phone": "9090909090",
+    "fatherName": "subham singh",
+    "motherName": "nimrit kaur",
+    "address": "jalore, rajasthan, india"
+}

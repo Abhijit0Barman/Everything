@@ -1,0 +1,12 @@
+{
+  "students": [
+    { "id": 1, "name": "John" },
+    { "id": 2, "name": "Mary" },
+    { "id": 3, "name": "Jane" }
+  ],
+  "instructors": [
+    { "id": 1, "name": "Abhijit", "course": "nem111" },
+    { "id": 2, "name": "Abhijit", "course": "nem111" },
+    { "id": 3, "name": "ox", "course": "111" }
+  ]
+}

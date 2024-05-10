@@ -1,0 +1,8 @@
+form>label>input {
+    width: 100%;
+    font-size: 20px;
+}
+
+form>label {
+    font-size: 20px;
+}

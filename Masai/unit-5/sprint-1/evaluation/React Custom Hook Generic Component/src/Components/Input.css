@@ -1,0 +1,34 @@
+.sm {
+  font-size: 10px;
+}
+
+.md {
+  font-size: 14px;
+}
+
+.lg {
+  font-size: 18px;
+}
+
+.xl {
+  font-size: 24px;
+}
+
+.outline {
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.filled {
+  border: 1px solid transparent;
+  background: rgba(0, 0, 0, 0.054);
+  border-radius: 5px;
+}
+
+.flushed {
+  border: none;
+  outline: none;
+  /* border-radius: 5px; */
+  border-bottom: 1px solid grey;
+}

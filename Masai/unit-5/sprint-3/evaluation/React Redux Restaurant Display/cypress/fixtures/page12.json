@@ -1,0 +1,11 @@
+[
+    {
+        "id": 100,
+        "name": "Martel",
+        "type": "cafe",
+        "rating": 1.5,
+        "number_of_votes": 769,
+        "price_starts_from": 120,
+        "image": "https://picsum.photos/200"
+    }
+]

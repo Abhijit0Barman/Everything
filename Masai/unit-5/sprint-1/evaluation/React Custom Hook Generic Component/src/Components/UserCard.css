@@ -1,0 +1,57 @@
+.usercard {
+  max-width: fit-content;
+  min-height: fit-content;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+.round {
+  height: 100px;
+  min-width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.square {
+  height: 100px;
+  min-width: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.userImage {
+  height: 100%;
+  width: 100%;
+}
+
+.userInformation {
+  width: 100%;
+  padding-left: 8px;
+}
+
+.userName {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.userTitle {
+  font-size: 22px;
+}
+
+.userDescription {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+
+.blue {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+
+.green {
+  background-color: rgba(0, 255, 34, 0.2);
+}

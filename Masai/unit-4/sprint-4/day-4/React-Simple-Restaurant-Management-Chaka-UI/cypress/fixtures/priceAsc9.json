@@ -1,0 +1,83 @@
+[
+    {
+      "name": "Gotham Cafe",
+      "type": "cafe",
+      "rating": 4,
+      "number_of_votes": 129,
+      "price_starts_from": 100,
+      "image": "https://picsum.photos/200",
+      "id": 21
+    },
+    {
+      "name": "Baaghi",
+      "type": "fast_food",
+      "rating": 4,
+      "number_of_votes": 977,
+      "price_starts_from": 120,
+      "image": "https://picsum.photos/200",
+      "id": 9
+    },
+    {
+      "id": 12,
+      "name": "von Grollmann",
+      "type": "ethnic",
+      "rating": 2.5,
+      "number_of_votes": 677,
+      "price_starts_from": 150,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 19,
+      "name": "Bennit",
+      "type": "ethnic",
+      "rating": 3.5,
+      "number_of_votes": 106,
+      "price_starts_from": 180,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 4,
+      "name": "Gallemore",
+      "type": "cafe",
+      "rating": 1.5,
+      "number_of_votes": 643,
+      "price_starts_from": 210,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 8,
+      "name": "Vahey",
+      "type": "casual_dining",
+      "rating": 4,
+      "number_of_votes": 745,
+      "price_starts_from": 210,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 3,
+      "name": "Danigel",
+      "type": "fast_food",
+      "rating": 2,
+      "number_of_votes": 189,
+      "price_starts_from": 230,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 10,
+      "name": "Mathouse",
+      "type": "cafe",
+      "rating": 5,
+      "number_of_votes": 466,
+      "price_starts_from": 230,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 7,
+      "name": "Tookill",
+      "type": "casual_dining",
+      "rating": 4,
+      "number_of_votes": 970,
+      "price_starts_from": 250,
+      "image": "https://picsum.photos/200"
+    }
+  ]

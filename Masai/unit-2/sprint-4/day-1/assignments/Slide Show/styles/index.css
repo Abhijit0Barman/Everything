@@ -1,0 +1,6 @@
+#slideshow img{
+    width: 80%;
+    margin: auto;
+    border: 5px solid red;
+    height: 600px;
+}

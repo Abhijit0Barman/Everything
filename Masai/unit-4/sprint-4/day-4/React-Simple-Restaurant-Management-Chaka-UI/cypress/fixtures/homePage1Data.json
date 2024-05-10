@@ -1,0 +1,29 @@
+[
+    {
+      "id": 4,
+      "name": "Gallemore",
+      "type": "cafe",
+      "rating": 1.5,
+      "number_of_votes": 643,
+      "price_starts_from": 210,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 6,
+      "name": "Tidder",
+      "type": "cafe",
+      "rating": 1.5,
+      "number_of_votes": 561,
+      "price_starts_from": 400,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 3,
+      "name": "Danigel",
+      "type": "fast_food",
+      "rating": 2,
+      "number_of_votes": 189,
+      "price_starts_from": 230,
+      "image": "https://picsum.photos/200"
+    }
+  ]

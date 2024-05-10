@@ -1,0 +1,5 @@
+
+export const AUTHENT="AUTHENT" 
+export const LOGIN_REQUEST="LOGIN_REQUEST"
+export const LOGIN_SUCCESS="LOGIN_SUCCESS"
+export const LOGIN_FAILER="LOGIN_FAILER"

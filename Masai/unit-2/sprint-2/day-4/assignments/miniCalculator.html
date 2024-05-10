@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calculator</title>
+    <style></style>
+  </head>
+  <body>
+    <input id="num" type="number" />
+    <input id="no" type="number" />
+    <div>
+      <button onclick="plus()">Add</button>
+      <button onclick="minus()">Substract</button>
+      <button onclick="multi()">Multiply</button>
+      <button onclick="divide()">Divide</button>
+    </div>
+  </body>
+</html>
+<script>
+  const no1 = document.querySelector("#num");
+  const no2 = document.querySelector("#no");
+
+  function plus() {
+    let res = Number(no1.value) + Number(no2.value);
+    alert(res);
+  }
+  function minus() {
+    alert(Number(no1.value) - Number(no2.value));
+  }
+  function multi() {
+    alert(Number(no1.value) * Number(no2.value));
+  }
+  function divide() {
+    alert(Number(no1.value) / Number(no2.value));
+  }
+</script>

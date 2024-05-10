@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid_Area_2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .outside{
+            display: grid;
+            font-size: 80px;
+            font-weight: bolder;
+            color: white;
+            /* background-color: grey; */
+            /* border:1px solid red; */
+            width: 80%;
+            margin: auto;
+            grid-auto-rows: 200px;
+            /* grid-template-columns: 200px 200px 200px 200px ; */
+            grid-template-columns: repeat(4,1fr);
+            margin-top: 90px;
+            gap: 20px;
+            grid-template-areas: "one one two five"
+                                "three four two five";
+        }
+        .outside>div{
+            /* border: 1px solid rgb(75, 75, 75); */
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+        }
+        .outside>div:nth-child(1){
+            background-color: #444444;
+            grid-area: one;
+        }
+        .outside>div:nth-child(2){
+            background-color: #444444;
+            grid-area: two;
+            
+        }
+        .outside>div:nth-child(3){
+            background-color: #444444;
+            grid-area: three;
+        }
+        .outside>div:nth-child(4){
+            background-color: #444444;
+            grid-area: four;
+        }
+        .outside>div:nth-child(5){
+            background-color: #444444;
+            grid-area: five;
+            height: 105%;
+        }
+        #top{
+            padding-top: 20px;
+            align-items: start;
+        }
+    </style>
+</head>
+<body>
+    <div class="outside">
+        <div>A</div>
+        <div id="top" >B</div>
+        <div>C</div>
+        <div>D</div>
+        <div id="top">E</div>
+    </div>
+</body>
+</html>

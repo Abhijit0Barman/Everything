@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "burger",
+      "price": 200
+    },
+    {
+      "id": 2,
+      "name": "Cold-drink",
+      "price": 230
+    },
+    {
+      "id": 3,
+      "name": "Momos",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "name": "Pizza",
+      "price": 500
+    },
+    {
+      "id": 5,
+      "name": "Chaat",
+      "price": 100
+    }
+  ]
+}

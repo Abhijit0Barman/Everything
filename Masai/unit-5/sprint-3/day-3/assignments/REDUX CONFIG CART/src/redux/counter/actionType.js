@@ -1,0 +1,3 @@
+
+export const ADD_ACTION="ADD_ACTION"
+export const REDUCE_ACTION="REDUCE_ACTION"

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid-Area-1</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0px;
+        background-color: rgb(194, 194, 194);
+        padding: 0px;
+      }
+      .outside {
+        width: 90%;
+        margin: auto;
+        /* border: 1px solid red; */
+        display: grid;
+        grid-auto-rows: 200px;
+        grid-template-columns: repeat(4,1fr);
+        /* grid-template-columns: 24% 24% 24% 24%  ; */
+        gap: 10px;
+        margin-top: 100px;
+      }
+      .outside>div{
+        /* border: 1px solid rgb(231, 231, 231); */
+        color: rgb(236, 236, 236);
+        border-radius: 10px;
+        padding-left: 20px;
+        font-size: xx-large;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        font-size: 50px;
+        font-weight: bolder;
+      }
+      .outside>div:nth-child(1){
+        background-color: rgb(250, 0, 0);
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      .outside>div:nth-child(2){
+        background-color: rgb(250, 225, 0);
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 3;
+        grid-column-end: 5;
+      }
+      .outside>div:nth-child(3){
+        background-color: rgb(50, 250, 0);
+      }
+      .outside>div:nth-child(4){
+        background-color: rgb(25, 0, 250);
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+      .outside>div:nth-child(5){
+        background-color: rgb(250, 0, 237);
+        grid-row-start: 3;
+        grid-row-end: ;
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outside">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
+    </div>
+  </body>
+</html>

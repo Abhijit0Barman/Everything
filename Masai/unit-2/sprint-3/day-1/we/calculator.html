@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+
+<body>
+    <h1 id="display"></h1>
+    <div class="keypad">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+    </div>
+    <div class="operator">
+        <button>+</button>
+        <button>-</button>
+        <button>*</button>
+        <button>/</button>
+    </div>
+    <button id="equal">=</button>
+</body>
+
+<script>
+    const keypadBtns = document.querySelectorAll(".keypad > button");
+    const operatorBtns = document.querySelectorAll(".operator > button");
+    const equal = document.getElementById("equal");
+    const displayheading = document.querySelector("#display");
+    
+    let first = "";
+    let second = "";
+    let flag = true;
+    let operators = "";
+    
+    for(let i=0; i < keypadBtns.length; i++){
+        keypadBtns[i].addEventListener("click",function () {
+            if(flag===true){
+                first+=keypadBtns[i].innerText;
+                displayheading.innerText=first;
+            }else{
+                second+=keypadBtns[i].innerText;
+                displayheading.innerText=second;
+            }
+        });
+    }
+
+    for(let i=0;i<operatorBtns.length;i++){
+        operatorBtns[i].addEventListener("click",function(){
+            flag=false;
+            operators=operatorBtns[i].innerText;
+        });
+    }
+
+    equal.addEventListener("click",function(){
+        displayheading.innerText=Calculate(first,second,operators);
+    })
+
+    function Calculate(first,second,operator){
+        switch(operator){
+            case"+": 
+            return Number(first) + Number(second);
+            case"-": 
+            return Number(first) - Number(second);
+            case"*": 
+            return Number(first) * Number(second);
+            case"/": 
+            return Number(first) / Number(second);
+        }
+    }
+</script>
+    
+    </html>

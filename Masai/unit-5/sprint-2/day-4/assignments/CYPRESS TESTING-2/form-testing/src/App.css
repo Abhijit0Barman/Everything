@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.error {
+  color: red;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID COFFEE WITH MEDIA QUWRIES</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #f9f8fb;
+        }
+        .main{
+            width: 80%;
+            margin: auto;
+            display: grid;
+            gap: 10px;
+            /* grid-auto-columns: 400px; */
+            grid-template-columns: 300px 300px 300px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .main>div{
+            box-shadow: #c09a52b1 0px 7px 29px 0px;
+            padding: 20px;
+        }
+        .main>div>div{
+            display: flex;
+            justify-content: space-between;
+        }
+        .main>div>div>p:nth-child(1){
+            color: black;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        .main>div>div>p:nth-child(2){
+            color: #c09952;
+            font-size: larger;
+            font-weight: bolder;
+        }
+        @media only screen and (min-width:501px) and (max-width:1000px){
+            .main{
+                grid-template-columns: 300px 300px;
+            }
+        }
+        @media only screen and (max-width:500px){
+            .main{
+                grid-template-columns: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappuccino</p>
+                <p>$49</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti illum cum quasi?</p>
+        </div>
+        
+    </div>
+</body>
+</html>

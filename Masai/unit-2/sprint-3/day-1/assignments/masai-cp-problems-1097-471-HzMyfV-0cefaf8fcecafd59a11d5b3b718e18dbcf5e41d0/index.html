@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Games</title>
+  </head>
+  <body>
+    <div id="max"></div>
+    <div id="min"></div>
+    <div id="score"></div>
+    <div id="keypad">
+      <button>0</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+    </div>
+    <button id="enter">ENTER</button>
+  </body>
+  <script>
+    const max = document.querySelector("#max");
+    const min = document.querySelector("#min");
+    const score = document.querySelector("#score");
+    const keypad = document.querySelectorAll("#keypad > button");
+    const enter = document.querySelector("#enter");
+
+    let first = "";
+    let second = "";
+    let flag = true;
+
+    for (let i = 0; i < keypad.length; i++) {
+      keypad[i].addEventListener("click", function () {
+        if (flag===true) {
+          first += keypad[i].innerText;
+          score.innerText = first;
+        } else {
+          second += keypad[i].innerText;
+          score.innerText = second;
+        }
+        max.innerText=Math.max(+first,+second);
+        min.innerText=Math.min(+first,+second);
+        // alert(typeof first)
+      });
+    }
+
+    enter.addEventListener("click", function(){
+      flag=false;
+    })
+
+    // if( Number(first) < Number(second) ){
+    //   max.innerText=second;
+    //   min.innerText=first;
+    // }
+    // else{
+    //   max.innerText=Number(first);
+    //   min.innerText=Number(second);
+    // }
+  </script>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(232, 232, 232);
+        margin: 0;
+        padding: 0;
+      }
+      #team-members {
+        width: 80%;
+        display: flex;
+        margin: auto;
+        /* text-align: center; */
+        /* border: 1px solid red; */
+      }
+      #team-members > div {
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        width: 23%;
+        margin: auto;
+        text-align: center;
+        /* border: 1px solid red; */
+      }
+      #team-members img {
+        width: 100%;
+      }
+      .heading {
+        text-align: center;
+      }
+      #team-stats {
+        display: flex;
+        width: 100%;
+        background-color: #fab701;
+        /* border: 1px solid rgb(42, 0, 251); */
+        margin-top: 20px;
+      }
+      #team-stats > div {
+        /* border: 1px solid red; */
+        text-align: center;
+        width: 19%;
+        margin: auto;
+      }
+      #cards {
+        /* border: 1px solid red; */
+        display: flex;
+        width: 90%;
+        margin: auto;
+      }
+      #cards > div {
+        /* border:1px solid #fab701; */
+        width: 30%;
+        margin: auto;
+        text-align: center;
+      }
+      #cards > div > img {
+        width: 25%;
+      }
+      .heading>h1{
+        color: #6cb4b4;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="heading">
+      <h1>Meet Our Expert Members</h1>
+      <p>Who are in extremely love with eco friendly system.</p>
+    </div>
+    <!-- Top-section -->
+    <div id="team-members">
+      <!-- This section should contain 4 children divs, each div should have img,h2,p -->
+      <div>
+        <img
+          src="data:image/jpeg;base64,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"
+          alt=""
+        />
+        <h2>Abhijit Barman</h2>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div>
+        <img
+          src="data:image/jpeg;base64,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"
+          alt=""
+        />
+        <h2>Abhijit Barman</h2>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div>
+        <img
+          src="data:image/jpeg;base64,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"
+          alt=""
+        />
+        <h2>Abhijit Barman</h2>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div>
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAH8AVQMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBgMFBwACAf/EADYQAAIBAwMCAwUHAgcAAAAAAAECAwAEEQUSIQYxE0FRImFxgaEHFDJCkcHRI+EVFzNSYpOx/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAEDAgT/xAAgEQEBAAICAwADAQAAAAAAAAAAAQIRAyESMUEiMmET/9oADAMBAAIRAxEAPwBkjjohEFci1Oq1pl5CeletlSgV920BAUqNkovbUbLQATx+6h5I6sHWoHWgKqWKgpoc+VXMqUHLHTCkkg5rqPeLntXUEakWpVFeVFTKKTT6BQmq6na6XB4t3JjdkIg5Zz6AUTNKkEDzSHaiKWY+gFY5N1Bcavrk2oRMpUDbFG35F+fr50sstHjNmJ+otU1eeYsDZWsBG+GI/wBT4sfzfAY+dG291KWeVNXf8OdpcOhB7MM9vh2peidJ3FzFcy2VyVw4ePKNgdiD+1Lmq21/Ndlra0KnON8CsoY+uDULd/VpOvR6PXi2N4LbWLfAz/qxDuPJgPMfD+1NVnfWmo24nsp0miP5kOawqdNSjQJcxuVTlVdc7fhmmb7M544dUwzbDKcDyB4/tVcallGoSLQsiUe44oaRaowAdOa6p3XmuoC8WpFqJKlWkFJ11OLfpTUGLbdyBAR6k4xWbdBdIN1DK1xMzLaqxUbfzVpfXMQm6S1Jdu4iLcB8CD+1LXRGvQaFoAiC4ljdllkfGwPnkA55xkVPk9K8fvs8aN0Rp1kihIE48yKtp9GiUAiNeDkYFZ3D9pl2t2yvLbzQKTkxRspGO/fviidY+0gqnh2M8fibQS00bgAHtxjmo+P8W8vu1xrOi27wStJEnK47dhWG3j/4ZrEsUBIVJMjB9+afE69vrmORbk21wrcf0lKn60iXEB1DW7doVbwrmdVViMZ5G4fIVrjxsrPJlLG6qcxofUA1E4qWNlaJdpyAMVG9dDmCuOa6vTjmupharUi1ChqVTQaDWbUX2k3VsRu8SIgD3+VVPSWk2smkRpdW0asUQkNw0bhQnHB8lUfLzzTCCMUk3msXWiz3lumGMWZARzwxyP07fKpci3DZ6MkmiWUl1FarDHJ4h9tmOSE8wAFHftnyzmvHW1na3Gv2M13Cj74vBBbjkc8fXj3+6lu56nvdP0FdSsZIJtR8ZfGRhkFPNB9Kof8AMS+1jV7ZLyGOOyBPiqMkk+R+RxUe7OlvxlMt90vZtumjT2uSN3hqM+8rzWczxR2fUUCRNkW+32vU55NNV11W9xbTxxEFEOPE9Qf3pHuLlGnd05Zm7+g9PpW+PbHLrTXtB1AXMW3OeKtHNZz0hqDLKAzcVoSuHQEeddDleH711c55rqAPQ1KpoZDUykUjT54rPerbhrPqGC6XsV2SZ7Y57+7mn4txSL1hbGe7YAZBjP7Usv1rWG/KLu40Wy1GxW6j06OWYp+KM7ST78d6S4unna7Ly6Y0KbjkSNxj4VDo/Veq6NH91374xwu7uPdXnVusL+7jKKwj3Y3etc+svTp/0mlf1Jqm+4e1t4ljgiIARFwCQP2peUVYRwt92mkclnZTgnviq9D2xVcJ1pz57t3TJ09lNrCtH0648SEZ8qzzQR7Apy0yXZwTVU12TzXVDvzXUAejVMpoKJ6utL0m4vSGbMUX+4jk/AUGGRWchEUsx7AdzVRrWnOk2+XhtpG30rSrOxt7JMQIAfNjyTS91Zp7SYu4QSmMOPQ+tS5LfHpTj15dsj1TSY3c5XjvVG+kxJNn2jT1fx4UgjkVQypulwBk1GV0XGUBb2YbPHlgV7s+kIr+4RUeSLecezyB76vdL02SXnYcU56Boxtx94lXHHsD199GNy30zn4+PZDHSeqaS5Aj+8QjtJF3x7x3oi3YoQGyD6GtTijGOaG1DQbDUFJmiAk8pE4aurblsJEcvs/ir7VpddKXkUmLWVJIz23naRXU9kZtF0OO1VJboCSfvjuq/CmFCFGBVctwAcele1uQe2aw0sfEA70PMQQdrDPofOohITUcjUBU6jo1hcglojG3rHyP0qmXpmxjk3CRv+kmmg85qF1FZuErUzyn0FZWNrbY8OLcR2Mnb9KPYluTyfWogOam8qepPRW2+3JxUqsB51ATioJJSB386ZDWkGa6qme7InKjBwo7/OuoDzBdmSIoWy6HYx9cdj8wRVjbEbRSRpmoiS+gcEgXcG4D0YDP8/SmezuCYwTQF2rjyry7UGJ9qg+tDX+oG2a3jC5aZ9oPoKCtkm6OklSMZY/IDJ/Sg5r8LytrduP+MX84qYyY7dqX+qOpk0OOJVi8WaXkKeAAO5pb0a0TVbcsqyLPAzHA8eFkH64x9aO38d6zK8+0C+Wdhbw2rx88bW/9JGePdRWg9cpPfNBdwmCOT8IQ7lRh3I8wD6c80vIz+8oFA3VyEHzqOWfIyOxql1a+8GJmOeBmtEtI3ElzKSfyr+9dSF1Hf3z3saWUxiAiVmx55z/H1rqA/9k="
+          alt=""
+        />
+        <h2>Abhijit Barman</h2>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+    </div>
+
+    <!-- Medium-section -->
+    <div id="team-stats">
+      <!-- This section should contain 5 children divs, each div should have h1,p -->
+      <div>
+        <h1>1001</h1>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div>
+        <h1>1001</h1>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div>
+        <h1>1001</h1>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div>
+        <h1>1001</h1>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div>
+        <h1>1001</h1>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+    </div>
+
+    <div class="heading">
+      <h1>Some Features that Made us Unique</h1>
+      <p>Who are in extremely love with eco friendly system.</p>
+    </div>
+
+    <!-- bottom-section -->
+    <div id="cards">
+      <!-- This section should contain 3 children divs, each div should have img,h2,p -->
+      <div>
+        <img
+          src="https://images.pexels.com/photos/1081204/pexels-photo-1081204.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+        <h2>Building Drawing</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sed
+          rem distinctio pariatur ab blanditiis animi, quam odit culpa dolor.
+        </p>
+      </div>
+      <div>
+        <img
+          src="https://images.pexels.com/photos/1081204/pexels-photo-1081204.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+        <h2>Building Drawing</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sed
+          rem distinctio pariatur ab blanditiis animi, quam odit culpa dolor.
+        </p>
+      </div>
+      <div>
+        <img
+          src="https://images.pexels.com/photos/1081204/pexels-photo-1081204.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+        />
+        <h2>Building Drawing</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sed
+          rem distinctio pariatur ab blanditiis animi, quam odit culpa dolor.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

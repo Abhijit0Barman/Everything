@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector Tree</title>
+
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      .app{
+        /* border: 1px splid black; */
+      }
+      .grandfather{
+        width: 90%;
+        margin: auto;
+        padding-bottom: 3%;
+        padding-top: 1%;
+        border: 1px solid rgb(11, 1, 1);
+        padding-left: 1%;
+      }
+      .father{
+        /* margin-top: 500px; */
+        border: 1px solid rgb(0, 0, 0);
+        width: 90%;
+        margin: auto;
+        padding-bottom: 2%;
+        padding-top: 2%;
+        margin-top: 2%;
+        /* display: flex; */
+        text-align: center;
+        
+      }
+      .father>div{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        margin-bottom: 20px;
+        padding-bottom: 50px;
+        margin-top: 2%;
+        padding-left: 1%;
+        border: 1px solid rgb(2, 0, 12);
+      }
+      .father>div>div{
+        display: flex;
+        margin: auto;
+        /* width: 20%; */
+        /* padding-top: 10px; */
+        /* padding-bottom: 50px; */
+        border: 1px solid rgb(31, 123, 3); 
+      }
+      .father>div>div>div{
+        border: 1px solid rgb(218, 0, 0); 
+        width: 30%;
+        
+      }
+      .father>div>div>div:nth-child(1){
+        color: red;
+        font-size: 40px;
+      }
+      .father>div>div>div:nth-child(1){
+        color: red;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="grandfather">
+        Grandfather
+        <div class="father">
+          Father
+          <div class="person">
+            <p>Person-1</p>
+            <div>child-1</div>
+            <div>child-2</div>
+            <div>child-3</div>
+            <div class="children">
+              child-4
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+            </div>
+          </div>
+          <div class="person">
+            <p>Person-2</p>
+            <div>child-1</div>
+            <div>child-2</div>
+            <div class="children">
+              child-3
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+            </div>
+            <div>child-4</div>
+          </div>
+          <div class="person">
+            <p>Person-3</p>
+            <div>child-1</div>
+            <div class="children">
+              child-2
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+            </div>
+            <div>child-3</div>
+            <div>child-4</div>
+          </div>
+          <div class="person">
+            <p>Person-4</p>
+            <div class="children">
+              child-1
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>4</div>
+            </div>
+            <div>child-2</div>
+            <div>child-3</div>
+            <div>child-4</div>
+          </div>
+          <!-- Here you will have to create the Person Elements -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

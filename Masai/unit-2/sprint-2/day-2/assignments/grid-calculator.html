@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0%;
+            margin: 0%;
+        }
+        h1{
+            text-align: center;
+            color: #007f7f;
+        }
+        .outer{
+            width: 500px;
+            margin: auto;
+            /* border: 1px solid rgb(0, 0, 0); */
+            display: grid;
+            grid-auto-rows: 90px;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+            padding: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        input{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            margin-bottom: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: none;
+            border-radius: 9px;
+        }
+        button{
+            font-size: xx-large;
+            border-radius: 9px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: none;
+        }
+        .red{
+            background-color: #fe0000;
+            color: white;
+        }
+        .black{
+            background-color: #000000;
+            color: white;
+        }
+            
+        </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div class="outer">
+        <input type="number">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="black">+</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="black">-</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="black">x</button>
+        <button class="red">c</button>
+        <button>0</button>
+        <button class="black">=</button>
+        <button class="black">/</button>
+    </div>
+</body>
+</html>

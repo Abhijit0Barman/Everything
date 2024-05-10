@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiggy</title>
+    <style>
+      /* Write all styles here  */
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        padding: 0;
+        margin: 0;
+        background-color:#f2f2f2;
+      }
+      .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 50px;
+        /* margin-bottom: 30px; */
+        /* margin-top: 40px; */
+        background-color: white;
+      }
+      .nav img{
+        width: 50px;
+      }
+      .nav button{
+        background-color: #fe0000;
+        color: white;
+        border: none;
+        padding: 0px 25px 0px 25px;
+        border-radius: 10px;
+      }
+      .nav>div{
+        width: 60%;
+        justify-content: space-between;
+        display: flex;
+      }
+      .nav>div p{
+        color: #82b2df;
+        font-weight: bolder;
+        font-size: 20px;
+      }
+      .top{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #181a29;
+        padding-top: 3%;
+        padding-bottom: 3%;
+      }
+      .top img{
+        width: 20%;
+      }
+      .mid{
+        /* width: 90%; */
+        padding-left: 4%;
+        padding-right: 4%;
+        margin: auto;
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 30px;
+        background-color:#f2f2f2;
+      }
+      .mid>div{
+        /* border: 1px solid red; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .mid>div img{
+        width: 100%;
+      }
+      .mid>div p{
+        text-align: center;
+      }
+      .mid>div h2{
+        text-align: center;
+      }
+      .bottom{
+        background-color:#f2f2f2;
+      }
+      .bottom>h1{
+        padding-left: 4%;
+      }
+      .bottom>div{
+        padding-left: 4%;
+        padding-right: 4%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+        margin-bottom: 5px;
+      }
+      .bottom>div img{
+        width: 30%;
+      }
+      @media only screen and (max-width: 800px) {
+        /* Medium Screen  */
+        .nav>div{
+          display: none;
+        }
+        .mid{
+          grid-template-columns: repeat(2,1fr);
+        }
+        
+      }
+      
+      @media only screen and (max-width: 500px) {
+        /* Small Screen  */
+        .nav>div{
+          display: none;
+        }
+        .top{
+          flex-direction:column;
+          justify-content: center;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        .mid{
+          grid-template-columns: repeat(1,1fr);
+        }
+        .bottom>div{
+          flex-direction:column;
+          justify-content: center;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        .bottom>h1{
+        padding-left: 20%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2023-03-02/logo_742606.png" alt="">
+      <div>
+        <p> Search </p> <p>Offers</p> <p>Help</p> <p>Cart</p> <p>Profile</p>
+      </div>
+      <button> <p>Signin</p> </button>
+      <!-- Create the Navbar Here  -->
+    </div>
+    <div class="top">
+      <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" alt="">
+      <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" alt="">
+      <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" alt="">
+      <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" alt="">
+      <!-- Create the top section here  -->
+    </div>
+    <div class="mid">
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb" alt="">
+        <h2>KFC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed.</p>
+        <p>$250</p>
+      </div>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb" alt="">
+        <h2>KFC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed.</p>
+        <p>$250</p>
+      </div>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb" alt="">
+        <h2>KFC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed.</p>
+        <p>$250</p>
+      </div>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb" alt="">
+        <h2>KFC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed.</p>
+        <p>$250</p>
+      </div>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb" alt="">
+        <h2>KFC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed.</p>
+        <p>$250</p>
+      </div>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb" alt="">
+        <h2>KFC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed.</p>
+        <p>$250</p>
+      </div>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb" alt="">
+        <h2>KFC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed.</p>
+        <p>$250</p>
+      </div>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb" alt="">
+        <h2>KFC</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, sed.</p>
+        <p>$250</p>
+      </div>
+      <!-- Create the mid section here  -->
+      <!-- Here will come 8 child items  -->
+    </div>
+    <div class="bottom">
+      <h1>Our picks for you</h1>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Offers_yqoiuk" alt="">
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Offers_yqoiuk" alt="">
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Offers_yqoiuk" alt="">
+        <!-- Create bottom part here  -->
+      </div>
+    </div>
+  </body>
+</html>

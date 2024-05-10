@@ -1,0 +1,18 @@
+.App {
+  /* text-align: center; */
+  padding: 3rem;
+  height: 100vh;
+}
+
+.dark-mode {
+  background-color: rgb(13, 17, 23);
+}
+
+.theme-button {
+  background-color: white;
+  border: 1px solid black;
+  font-size: 26px;
+  border-radius: 3px;
+  margin: 2rem 0;
+  cursor: pointer;
+}

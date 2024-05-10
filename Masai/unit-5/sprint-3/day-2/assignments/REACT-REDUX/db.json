@@ -1,0 +1,84 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "status": false
+    },
+    {
+      "title": "React",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "HTML",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Javascript",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "paost todos",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "Nirmal",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "abhijit ",
+      "status": false,
+      "id": 7
+    },
+    {
+      "title": "Nirmkksdhf",
+      "status": false,
+      "id": 8
+    },
+    {
+      "title": "gfggffgd",
+      "status": false,
+      "id": 9
+    },
+    {
+      "title": "gfgfgfdgf",
+      "status": false,
+      "id": 10
+    },
+    {
+      "title": "gghghghd",
+      "status": false,
+      "id": 11
+    },
+    {
+      "title": "dsdsdsa",
+      "status": false,
+      "id": 12
+    },
+    {
+      "title": "gfgdfg",
+      "status": false,
+      "id": 13
+    },
+    {
+      "title": "gchghgh",
+      "status": false,
+      "id": 14
+    },
+    {
+      "title": "hghfh",
+      "status": false,
+      "id": 15
+    },
+    {
+      "title": "hhhhfg",
+      "status": false,
+      "id": 16
+    }
+  ]
+}

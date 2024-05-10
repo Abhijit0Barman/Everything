@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="./ques-1.html">Home</a>
+        <a href="./cart.html">Cart</a>
+    </div>
+    <div id="container"></div>
+</body>
+
+<script>
+    let container = document.getElementById("container");
+    let LSData = localStorage.getItem("masai-ecomm");
+    if (LSData === null) {
+        LSData = [];
+    } else {
+        LSData = JSON.parse(LSData);
+    }
+
+    DisplayProducts(LSData);
+
+    function DisplayProducts(data) {
+        container.innerHTML = "";
+        data.forEach(function (element) {
+            let product = document.createElement("div");
+
+            let image = document.createElement("img");
+            let title = document.createElement("h2");
+            let description = document.createElement("p");
+            let price = document.createElement("h4");
+            let category = document.createElement("p");
+
+            image.setAttribute("src", element.image);
+            title.innerText = element.title;
+            description.innerText = element.description;
+            price.innerText = element.price;
+            category.innerText = element.category;
+            product.append(image, title, description, price, category);
+            container.append(product);
+        })
+    }
+
+</script>
+
+</html>

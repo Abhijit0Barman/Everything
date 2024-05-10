@@ -1,0 +1,9 @@
+import { legacy_createStore } from "redux";
+import { reducer } from "./reducer";
+reducer
+const init={
+   todos:[]
+}
+
+export const store=legacy_createStore(reducer,init)
+

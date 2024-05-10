@@ -1,0 +1,83 @@
+[
+    {
+      "id": 5,
+      "name": "Downgate",
+      "type": "ethnic",
+      "rating": 5,
+      "number_of_votes": 639,
+      "price_starts_from": 975,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 10,
+      "name": "Mathouse",
+      "type": "cafe",
+      "rating": 5,
+      "number_of_votes": 466,
+      "price_starts_from": 230,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 13,
+      "name": "Duffet",
+      "type": "fast_food",
+      "rating": 5,
+      "number_of_votes": 937,
+      "price_starts_from": 1450,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "name": "Masai ",
+      "type": "fast_food",
+      "rating": 5,
+      "number_of_votes": 1200,
+      "price_starts_from": 900,
+      "image": "https://picsum.photos/200",
+      "id": 23
+    },
+    {
+      "id": 17,
+      "name": "Meekin",
+      "type": "casual_dining",
+      "rating": 4.5,
+      "number_of_votes": 948,
+      "price_starts_from": 500,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 20,
+      "name": "Stanbrooke",
+      "type": "ethnic",
+      "rating": 4.5,
+      "number_of_votes": 497,
+      "price_starts_from": 925,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "name": "Rasoie",
+      "type": "casual_dining",
+      "rating": 4,
+      "number_of_votes": 1200,
+      "price_starts_from": 1250,
+      "image": "https://picsum.photos/200",
+      "id": 1
+    },
+    {
+      "id": 7,
+      "name": "Tookill",
+      "type": "casual_dining",
+      "rating": 4,
+      "number_of_votes": 970,
+      "price_starts_from": 250,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 8,
+      "name": "Vahey",
+      "type": "casual_dining",
+      "rating": 4,
+      "number_of_votes": 745,
+      "price_starts_from": 210,
+      "image": "https://picsum.photos/200"
+    }
+  ]

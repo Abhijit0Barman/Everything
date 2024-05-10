@@ -1,0 +1,4 @@
+Method:GET, Route:/dc, user-agent:PostmanRuntime/7.32.1
+Method:GET, Route:/marvel, user-agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
+Method:DELETE, Route:/marvel/delete/6, user-agent:PostmanRuntime/7.32.1
+Method:GET, Route:/marvel/2, user-agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36

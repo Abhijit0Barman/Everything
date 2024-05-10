@@ -1,0 +1,90 @@
+/* Write your styles here  */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: rgb(240, 240, 240);
+}
+#header{
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+#doctors{
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+#doctors>div{
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  text-align: center;
+  /* border: 1px solid red; */
+}
+#doctors img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+#doctors>div>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button{
+  /* border: 1px solid red; */
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px 10px 5px 10px;
+font-size: 20px;
+  margin-top: 30px;
+  border: none;
+}
+button:nth-child(1){
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  margin: 10px 10px 10px 10px;
+  color: #1f95b5;
+}
+button:nth-child(2){
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  background-color: #ff7458;
+  color: white;
+}
+#service{
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+#service img{
+  width: 50px;
+}
+
+
+/* keep media queries at the bottom */
+/* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+  #doctors{
+    grid-template-columns: repeat(2,1fr);
+  }
+  #service{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #doctors{
+    grid-template-columns: repeat(1,1fr);
+    
+  }
+  #service{
+    grid-template-columns: repeat(1,1fr);
+  }
+}

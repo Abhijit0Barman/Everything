@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch-1</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+
+<script>
+    const tbody = document.querySelector("tbody");
+    const API = "https://jsonplaceholder.typicode.com/todos";
+    let response = fetch(API);
+
+    response.then(function (res) {
+        return res.json();
+    })
+        .then((data) => {
+            Display(data);
+            console.log(data);
+        }).catch(function (error) {
+            console.log(error);
+        })
+    function Display(data) {
+        tbody.innerHTML = "";
+        data.forEach(function (element) {
+            // console.log(element);
+            const card = document.createElement("tr");
+
+            const userId = document.createElement("td");
+            const id = document.createElement("td");
+            const title = document.createElement("td");
+            const completed = document.createElement("td");
+
+            userId.innerText = element.userId;
+            id.innerText = element.id;
+            title.innerText = element.title;
+            completed.innerText = element.completed;
+
+            card.append(userId, id, title, completed);
+            tbody.append(card);
+        })
+    }
+</script>
+
+</html>
+
+<!-- <div>
+    <h2>Name</h2>
+    <h4>username</h4>
+    <p>email</p>
+    <p>address</p>
+</div> -->

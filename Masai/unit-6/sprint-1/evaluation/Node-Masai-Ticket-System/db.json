@@ -1,0 +1,117 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Aman",
+      "age": 23,
+      "location": "Pune",
+      "tickets": [
+        {
+          "ticket_id": 1,
+          "title": "LMS Issue",
+          "body": "My LMS is not showing the lectures"
+        },
+        {
+          "ticket_id": 2,
+          "title": "Attendance",
+          "body": "Even though I have attended the lecture, I am marked absent"
+        }
+      ]
+    },
+    {
+      "id": 501,
+      "name": "pulkittyagi",
+      "age": 25,
+      "location": "Delhi",
+      "tickets": [
+        { "ticket_id": 20, "title": "New Ticket", "body": "Ticket Body" }
+      ]
+    },
+    {
+      "id": "141",
+      "name": "spsanchore13",
+      "age": 25,
+      "location": "Rajasthan",
+      "tickets": [
+        {
+          "ticket_id": "181",
+          "title": "One Day Sick Leave",
+          "body": "Due to fever i want to take one day leave"
+        },
+        {
+          "ticket_id": "182",
+          "title": "Two Day Sick Leave",
+          "body": "Due to fever i want to take one day leave"
+        }
+      ]
+    },
+    {
+      "id": -1,
+      "name": "user",
+      "age": 25,
+      "location": "XXXXXXXXXXX",
+      "tickets": [
+        {
+          "ticket_id": "181",
+          "title": "One Day Sick Leave",
+          "body": "Due to fever i want to take one day leave"
+        },
+        {
+          "ticket_id": "182",
+          "title": "Two Day Sick Leave",
+          "body": "Due to fever i want to take one day leave"
+        }
+      ]
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Chunnu",
+      "age": 45,
+      "location": "Patna",
+      "sub": "React",
+      "exp": 10
+    },
+    {
+      "id": 2,
+      "name": "Payal",
+      "age": 32,
+      "location": "Delhi",
+      "sub": "Node",
+      "exp": 4
+    },
+    {
+      "id": 501,
+      "name": "pulkittyagi",
+      "age": 25,
+      "location": "Delhi",
+      "sub": "Blockchain",
+      "exp": 4
+    },
+    {
+      "id": "122",
+      "name": "Shantilal",
+      "age": 20,
+      "location": "Jaipur",
+      "sub": "React Native",
+      "exp": 6
+    },
+    {
+      "id": -1,
+      "name": "user",
+      "age": 26,
+      "location": "Sanchore",
+      "sub": "React Native",
+      "exp": 1
+    },
+    {
+      "id": -1,
+      "name": "user",
+      "age": 26,
+      "location": "HHHHHHHH",
+      "sub": "React Native",
+      "exp": 1
+    }
+  ]
+}

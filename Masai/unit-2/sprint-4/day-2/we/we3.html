@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="otp"> 
+    <button>Submit</button>
+</body>
+<script>
+    const otp = document.getElementById("otp");
+    const submit = document.querySelector("button");
+
+    submit.addEventListener("click", function () {
+        const promise = new Promise(function (resolve, reject) {
+            setTimeout(() => {
+                if (otp.value === "1234") {
+                    resolve("OTP Correct")
+                } else {
+                    reject("Send OTP again");
+                }
+            }, 5000);
+        })
+
+        promise.then((data) => {
+            alert(data)
+        }).catch((error) => {
+            alert(error)
+        })
+    })
+</script>
+
+</html>

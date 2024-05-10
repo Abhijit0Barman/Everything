@@ -1,0 +1,83 @@
+[
+    {
+      "id": 4,
+      "name": "Gallemore",
+      "type": "cafe",
+      "rating": 1.5,
+      "number_of_votes": 643,
+      "price_starts_from": 210,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 6,
+      "name": "Tidder",
+      "type": "cafe",
+      "rating": 1.5,
+      "number_of_votes": 561,
+      "price_starts_from": 400,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 3,
+      "name": "Danigel",
+      "type": "fast_food",
+      "rating": 2,
+      "number_of_votes": 189,
+      "price_starts_from": 230,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "id": 16,
+      "name": "Dargie",
+      "type": "fast_food",
+      "rating": 2,
+      "number_of_votes": 217,
+      "price_starts_from": 725,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "name": "Friends Cafe",
+      "type": "casual_dining",
+      "rating": 2,
+      "number_of_votes": 800,
+      "price_starts_from": 400,
+      "image": "https://picsum.photos/200",
+      "id": 22
+    },
+    {
+      "id": 12,
+      "name": "von Grollmann",
+      "type": "ethnic",
+      "rating": 2.5,
+      "number_of_votes": 677,
+      "price_starts_from": 150,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "name": "Pitone",
+      "type": "ethnic",
+      "rating": 3.25,
+      "number_of_votes": 572,
+      "price_starts_from": 1000,
+      "image": "https://picsum.photos/200",
+      "id": 2
+    },
+    {
+      "id": 19,
+      "name": "Bennit",
+      "type": "ethnic",
+      "rating": 3.5,
+      "number_of_votes": 106,
+      "price_starts_from": 180,
+      "image": "https://picsum.photos/200"
+    },
+    {
+      "name": "Rasoie",
+      "type": "casual_dining",
+      "rating": 4,
+      "number_of_votes": 1200,
+      "price_starts_from": 1250,
+      "image": "https://picsum.photos/200",
+      "id": 1
+    }
+  ]

@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>WEB-101 C3</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Masai Job App</h2>
+      <div>
+        <a href="./index.html">
+          <h2>Home</h2>
+        </a>
+        <a href="./jobList.html">
+          <h2>Job List</h2>
+        </a>
+     
+        <a href="./applied.html">
+          <h2>Applied</h2>
+        </a>
+        <a href="./deleted.html">
+          <h2>deleted</h2>
+        </a>
+      </div>
+    </div>
+    <select id="filter">
+      <option value="">contract</option>
+      <option value="Part Time">Part Time</option>
+      <option value="Full Time">Full Time</option>
+      <option value="Freelance">Freelance</option>
+    </select>
+    <!-- update count of jobs in below h1 tag -->
+    <h1>Total Jobs:- <span id="job-count">0</span></h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>position</th>
+          <th>Add Date</th>
+          <th>Salary</th>
+          <th>job location</th>
+          <th>Email</th>
+          <th>contract Type</th>
+          <th>apply</th>
+          <th>delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Update the rows here using jsvascript -->
+      </tbody>
+    </table>
+  </body>
+  <script src="./Scripts/jobList.js"></script>
+</html>

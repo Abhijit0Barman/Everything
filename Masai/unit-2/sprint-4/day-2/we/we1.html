@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques-1</title>
+</head>
+
+<body>
+    <input type="number" id="count">
+</body>
+<script>
+    const count = document.getElementById("count");
+    const promise = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            if (+count.value > 0) {
+                resolve("Positive count");
+            } else {
+                reject("negative count");
+            }
+        }, 10000);// 10s
+    })
+
+    promise.then(function (data) {
+        alert(data);
+    }).catch(function (error) {
+        console.log(error);
+    })
+</script>
+
+</html>
