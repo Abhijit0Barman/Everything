@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=rU9ZODw5yvU&t=17245s
 #### Ordered an unordered inserts
 When executing bulk write operations ordered and unordered, determine the batch behaviour. 
 > Ordered insert 
-default behaviour is ordered, where Mongodb stocks on the first error 
+default behaviour is ordered, where Mongodb stops on the first error 
 >Unordered inserts
  when executing bulk write operations with unordered flag. Mongodb continue processing after encountering an error
 
@@ -36,8 +36,78 @@ db.COLLECTION-NAME.updateOne({KEY:VALUE},{$set:{KEY:VALUE}})      ===> UPDATE ON
 db.COLLECTION-NAME.deleteOne({KEY:VALUE})                         ===> DELETE ONE DOCUMENT FROM COLLECTION
 db.COLLECTION-NAME.find().pretty()                                ===> FETCH ALL DOCUMENTS FROM COLLECTION IN PRETTY FORMAT
 db.COLLECTION-NAME.find().count()                                 ===> COUNT ALL DOCUMENTS FROM COLLECTION
+```
+
+### COMPARISON OPERATORS
+```
+db.COLLECTION-NAME.find({'age':{$eq:30}})                         ===> GET ALL THE DATA EQUALS-TO AGE:30 
+db.COLLECTION-NAME.find({'age':{$ne:30}})                         ===> GET ALL THE DATA NOT-EQUALS-TO AGE:30
+db.COLLECTION-NAME.find({'age':{$gt:30}})()                       ===> GET ALL THE DATA GREATER THEN AGE:30
+db.COLLECTION-NAME.find({'age':{$gte:30}})()                      ===> GET ALL THE DATA GREATER THEN EQUALS-TO AGE:30
+db.COLLECTION-NAME.find({'age':{$lt:30}})()                       ===> GET ALL THE DATA LESS THEN AGE:30
+db.COLLECTION-NAME.find({'age':{$lte:30}})()                      ===> GET ALL THE DATA LESS THEN EQUALS-TO AGE:30
+
+db.COLLECTION-NAME.find({'age':{$in:[22,52]}})                    ===> GET ALL THE DATA THAT MATCHES THE ARRAY OF VALUES
+db.COLLECTION-NAME.find({'age':{$nin:[22,52]}})                   ===> GET ALL THE DATA THAT NOT_MATCHES THE ARRAY OF VALUES
+
+```
 
 
+### Introduction to Cursors
+> Cursor in Mongodb are used to efficiently retrieve large result sets from queries providing control over the data retrieval process.
+> Mongodb retrieves query results in batches using cursors.
+> Cursor are a pointer to the result set on the server.
+> Cursors are used to iterate through query results
+```
+Automatic Batching: 
+1. Mongodb retreats QD results in batches not all at once. 
+2. Default batch size is usually 101 documents.
+3. This improves memory efficiency and Network request
+```
+### Cursor Methods
+1. count()  
+2. limit()  
+3. skip() 
+4. sort() 
+```
+db.COLLECTION-NAME.find({'age':{$eq:30}}).count()                           ===> GET COUNT OF ALL THE DATA EQUALS-TO AGE:30
+db.COLLECTION-NAME.find({'age':{$eq:30}}).limit(2)                          ===> GET FIRST TWO DATA EQUALS-TO AGE
+db.COLLECTION-NAME.find({'age':{$eq:30}}).skip(2)                           ===> SKIP FIRST TWO DATA EQUALS-TO AGE
+db.COLLECTION-NAME.find({'age':{$eq:30}}).limit(2).skip(1)                  ===> SKIP FIRST 1 DATA Then After SKIP return  2 DATA
+db.COLLECTION-NAME.find({'age':{$eq:30}}).limit(2).sort({age:1})            ===> SORT DATA EQUALS-TO AGE Ascending 
+db.COLLECTION-NAME.find({'age':{$eq:30}}).limit(2).sort({age:-1})           ===> SORT DATA EQUALS-TO AGE Descending
 
+* skip() can be inefficent for large offsets.
+* Using skip() on large result sets may impact performance.
+* Consider using indexing to optimise query performance.
+```
+
+### Logical Operators
+1. $and  ===> Perform the logical AND operation on an array of expressions, where all expressions must be true for the document to match.
+```
+db.COLLECTION-NAME.find({  $and:[  {'age':{$gt:18}},  {'name':'abhijit'}  ]   })
+                OR
+db.COLLECTION-NAME.find(  {'age':{$gt:18}},  {'name':'abhijit'}   )
+```
+
+2. $or   ===> Performa logical OR operation on an array of expression where at least one expression must be true for the document to match. if multiple condition true, then multiple data will return, according to conditions.
+```
+db.COLLECTION-NAME.find({  $or:[  {'age':{$gt:18}},  {'name':'abhijit'}  ]
+```
+
+3. $nor  ===> Tt Opposite of ($or), whatever conditions matches will not return.
+```
+db.COLLECTION-NAME.find({$nor:[{'age':{$eq:52}},{'name':'abhijit'}]})
+```
+
+4. $not  ===> opposite of condition
+
+```
+db.data.find({'age':{$not:{$gt:30}}})
+```
+
+
+### Complex Expressions
+```
 
 ```
