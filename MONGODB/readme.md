@@ -1,4 +1,5 @@
-https://www.youtube.com/watch?v=rU9ZODw5yvU&t=17245s
+import locally from cli :-  mongoimport PATH\FILE-NAME.json -d DATABASE-NAME -c COLLECTION-NAME
+
 
 #### When to use Quotes and when not to ?
 ##### Special characters
@@ -166,14 +167,94 @@ db.comments.find({comments:{$size:2}})    check the nested number of elements in
 
 
 ### Projection 
+> To Include specific fields,use projection with a value of 1 for the fields you want. 
+> To Exclude fields, use projection with a value of 0 for the fields you want to exclude.
+> You cannot include and exclude fields simultaneously in the same query projection.
 ```
-2.04.18
+db.COLLECTION-NAME.find( {}, {field1:1,field2:1} )
+
+db.comments.find( {comments:{$size:2}}, { comments:1, _id:0 } )   ===> include `comments`-key & exclued `_id`-key 
+```
+
+
+### Embedded Documents
+> Query documents inside embedded documents using dot notation.
+```
+db.COLLECTION_NAME.find( {"parent.child":value} )
+
+db.comments.find({'comments.user':'Lily'})
+db.comments.find({'metadata.views': {$gt:1200} })
+```
+
+
+### $all vs $elemMatch
+> The $all operator selects the documents where the value of a field is an array that contains all the specified elements.
+```
+{ <field>: {$all: [<value1>,<value2>,...] } }
+
+db.comments.find( {'comments.user': { $all: ['Alice','Vinod'] } } )    ====> Case Sensitive you have to write Exactly Same inside array
+```
+> The $elemMatch operator matches documents that contain an array field with, at least one element that matches all the specified query criteria.
+```
+{ <fields>: {$elemMatch: {<query1>,<query2>,...} } }
+
+db.comments.find( { 'comments': { $elemMatch: { 'user':'Vinod', 'text':'Thanks for sharing.' } } } )      ====> Case Sensitive 
+                          OR
+db.comments.find( { 'comments.user': 'Vinod', 'comments.text':'Thanks for sharing.' } )                   ====> Case Sensitive 
+```
+
+
+### Update Operations in MongoDB
+```
+db.products.updateOne( { _id:ObjectId("515516")}, { $set: { 'price': 45 } } )   ===> if field exist then update, if not exists then created
+db.products.updateOne( { name:'Abhijit'}, { $set: { 'isMarried': false } } )   ===> if field exist then update, if not exists then created
+
+db.products.updateMany( { price:120 }, { $set: { 'isDiscount': false } } )   ===> if field exist then update, if not exists then created
+
+```
+
+
+### Removing and Renaming
+```
+db.COLLECTION_NAME.updateOne( {filter}, { $unset: {fieldName:1} } )                         ===> deleting key
+db.comments.updateOne({_id:6}, {$unset: {metadata:1}})
+
+db.COLLECTION_NAME.updateOne( {filter}, { $rename: { oldFieldName: "newFieldName" } } )     ===> rename key
+
+db.products.updateMany( { price:120 }, { $rename: { 'isDiscount': 'isSale' } } )            ===> multiple rename togather
+```
+
+
+### Updating Arrays and Embedded Documents
+```
+db.COLLECTION-NAME.updateOne( { filter }, { $push: { arrayField:"new element"} } )               ===> appends a value to an array field
+db.comments.updateOne({_id:5},{$push:{comments:{user:'Vinod',text:'hello'}}})       ===> Adding new object inside nested array of elements
+
+
+db.COLLECTION-NAME.updateOne( { filter }, { $pop: { arrayField:value } } )    ===> Deleting last element of and object inside nested array
+
+
+db.COLLECTION-NAME.updateOne( { filter }, { $set: { "arrayField.$.text" : "Updated text"} } )    ===> update nested document fields
+db.COLLECTION-NAME.updateOne({_id:7,'comments.user':'Alice'},{$set:{"comments.$.text":"Updated text"}}) ==>Positional Operator $ like index
+
+
+db.COLLECTION-NAME.updateOne({filter},{$pull:{arrayField:"elementToDelete"}}) =>Removes all occurrences of specified value from array field
 ```
 
 
 
+### Delete Operations in MongoDB
+```
+db.COLLECTION-NAME.deleteOne({_id:5})          ===> Deleting single Documents or object inside Collections
+
+db.COLLECTION-NAME.deleteMany({price:55})      ===> Deleting multiple Documents or object inside Collections
+```
 
 
 
-import locally from cli :- 
-mongoimport PATH\FILE-NAME.json -d DATABASE-NAME -c COLLECTION-NAME
+## Indexes in MongoDB
+```
+
+```
+
+2:54:07
