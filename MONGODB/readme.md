@@ -108,6 +108,72 @@ db.data.find({'age':{$not:{$gt:30}}})
 
 
 ### Complex Expressions
+1. The $expr operator allows using aggregation expressions within a query.
+2. Useful when you need to compare fields from the same document in a more complex manner.
+```
+Suntax           { $expr: { operator:[field, value] } }
+Example     db.data.find( { $expr: {$gt: ['$age',30] } } )
+```
+```
+db.products.insertMany([
+  {'quantity':50,'price':10,'targetPrice':200  },
+  {'quantity':30,'price':20,'targetPrice':150  },
+  {'quantity':70,'price':40,'targetPrice':150  },
+  {'quantity':20,'price':60,'targetPrice':100  },
+  {'quantity':1,'price':90,'targetPrice':100  }
+  ])
+
+  db.products.find({ $expr:{ $gt: [{$multiply: ['$quantity', '$price']}, '$targetPrice'] } })
+  db.products.find({ $expr:{ $lt: [{$add: ['$quantity', '$price']}, '$targetPrice'] } })
+  db.products.find({ $expr:{ $lt: [{$subtract: ['$quantity', '$price']}, '$targetPrice'] } })
+  db.products.find({ $expr:{ $gt: [{$divide: ['$quantity', '$price']}, '$targetPrice'] } })
 ```
 
+
+### Elements Operator
+1. $exists  ===> Matches documents that have a specific field, regardless of its value.
 ```
+db.data.find({'course name': {$exists: true}}).count()
+db.data.find({'price': {$exists: false},price:{$eq:10}})
+db.data.find({'course name': {$exists: false}}).count()
+```
+
+2. $type    ===> Operator filters documents based on the BSON data type of a field
+```
+db.products.find({price:{$type:'number'}})
+db.products.find({price:{$type:'string'}}).count()
+db.products.find({price:{$type:'bool'}}).count()
+
+1 Double
+2 String
+3 Object
+4 Array
+5 Binary data
+6 Undefined
+7 ObjectID
+8 Boolean
+9 Date
+10 Null
+11 Regular Expression
+
+```
+
+3. $size  ===> Operator matches documents where the size of an array field matches a specified value. 
+```
+db.comments.find({comments:{$size:2}})    check the nested number of elements inside every object. if matches then return
+```
+
+
+
+### Projection 
+```
+2.04.18
+```
+
+
+
+
+
+
+import locally from cli :- 
+mongoimport PATH\FILE-NAME.json -d DATABASE-NAME -c COLLECTION-NAME
