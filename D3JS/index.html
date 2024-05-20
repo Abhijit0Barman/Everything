@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D3js</title>
+    </head>
+    <body>
+        <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+            provident praesentium nobis amet officia cumque impedit rerum illo
+            corporis minus?
+        </h2>
+        <ul></ul>
+        <svg width="300px" height="300px"></svg>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <script>
+            heros = ["A", "B", "C", "D"];
+            d3.select("h2").style("color", "red");
+            d3.select("ul")
+                .selectAll("li")
+                .data(heros)
+                .enter()
+                .append("li")
+                .text((item) => item + "!");
+
+            var numbers = [20, 30, 50, 30, 10, 90];
+            var barHeight = 40;
+            d3.select("svg")
+                .selectAll("rect")
+                .data(numbers)
+                .enter()
+                .append("rect")
+                .attr("width", (d) => d)
+                .attr("height", barHeight - 4)
+                .attr(
+                    "transform",
+                    (d, i) => "translate(100," + i * barHeight + ")"
+                );
+        </script>
+    </body>
+</html>

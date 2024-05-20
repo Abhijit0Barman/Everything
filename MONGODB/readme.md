@@ -252,9 +252,55 @@ db.COLLECTION-NAME.deleteMany({price:55})      ===> Deleting multiple Documents 
 
 
 
+### explain('executionStats')
+```
+Use explain() method to understand query execution in detail.
+Use explain('executionStats') method to measure the time taken to execute a query.
+
+db.products.find({'price':{$gt:40}}).explain()
+db.products.find({'price':{$gt:40}}).explain('executionStats')
+```
+
+
+
 ## Indexes in MongoDB
+> _id is a by default unique index given by mongodb.
+> Sear
+```
+Index are specialized data structures that optimize data retrieval speed in MongoDB
+> Index store a fraction of data in a more searchable format.
+> They eneble MongoDB to locate data faster during quiries.
+> Indexes are separate from collection and multiple indexes can exist per collection.
+
+> Faster Querying: indexes drastically accelerate data retrival, particularly for large collections.
+> Efficient Sorting: Indexes facilitate rapid sorting based on specific fields. 
+> Improved Aggregation: Aggregation operations become more efficient with optimized indexes.
+> Indexing on Multiple Fields: Complex queries can be executed efficiently by utilizing multiple fields in indexes.
+
+
+db.COLLECTION-NAME.createIndex({field:1});  ===> 1 for storing indexes in Ascending order.
+db.COLLECTION-NAME.createIndex({field:-1});  ===> -1 for storing indexes in Decending order.
+
+db.users.createIndex({email:1},{unique:true});  ===> 1 for storing indexes in Ascending order + unique emails only .
+
+
+
+db.COLLECTION_NAME.getIndexes()   ====>  indexes also store in collections 
+
+db.products.find({'price':{$gt:40}}).explain('executionStats') ===> before creating index more time
+db.products.find({'price':{$gt:40}}).explain('executionStats') ===> after creating indexes less time also scane less documents
+
+
+db.products.dropIndex({price:1})  ===> price index got deleted from collection
 ```
 
-```
 
-2:54:07
+
+
+
+3.12.54
+
+
+
+
+trim:true,lowercase:true
