@@ -348,15 +348,172 @@ db.products.aggregate( [
 ### $group
 
 ```
+db.products.aggregate([{
+  $group:{
+    _id: {comp:"$company"},
+    totalProducts:{$sum:1}
+    }
+  }])
+```
+
+### $addFields
+
+```
 db.products.aggregate([
-  {$group:{_id: {comp:"$company"}, totalProducts:{$sum:1}}}
+  {
+    $addFields: {
+      uniqueKey: {
+        $concat: ["$brand", "_", { $toString: "$id" }],
+      },
+    },
+  },
+]);
+```
+
+### $sort
+
+```
+db.numbers.aggregate([  {
+    $sort: { _id: 1 }
+  },
+]);
+```
+
+### $sum $avg
+
+```
+db.numbers.aggregate([
+  {
+    $group: {
+      _id: null,
+      totalPrice: { $sum: "$price" },
+      totalAvg: { $avg: "$price" },
+    },
+  },
+]);
+```
+
+### $project $subtract $multiply
+
+```
+db.numbers.aggregate([
+  {
+    $project: {
+      price: 1,
+      "quantity": 1,
+      totalPrice: { $sum: "$price" },
+      totalAvg: { $avg: "$price" },
+      discountedPrice1:{$subtract:["$price",5]},
+      discountedPrice2:{$multiply:["$price",0.8]},
+    },
+  },
+]);
+```
+
+### $push
+
+```
+
+```
+
+### $unwind
+
+> $push ==> include duplicate value
+
+```
+db.products.aggregate([
+  { $match: { brand: { $eq: "Apple" } } },
+  {
+    $unwind: "$images",
+  },
+  {
+    $group: {
+      _id: null,
+      allImages: { $push: "$images" },
+    },
+  },
+]);
+```
+
+### $addToSet
+
+> $addToSet ==> include only Unique value
+
+```
+db.products.aggregate([
+  { $match: { brand: { $eq: "Apple" } } },
+  {
+    $unwind: "$images",
+  },
+  {
+    $group: {
+      _id: null,
+      allImages: { $addToSet: "$images" },
+    },
+  },
+]);
+```
+
+### $size
+
+```
+db.products.aggregate([
+  { $match: { brand: { $eq: "Apple" } } },
+  {
+    $unwind: "$images",
+  },
+  {
+    $group: {
+      _id: null,
+      allImages: { $addToSet: "$images" },
+    },
+  },
+  {
+    $project: {
+      _id:1,
+      allImages: { $size: "$allImages" },
+    }
+  }
+]);
+```
+
+### $skip $limit
+
+```
+db.products.aggregate([
+  { $match: { brand: { $eq: "Apple" } } },
+  {
+    $project: {
+      _id:1,
+      allImages: { $size: "$images" },
+    }
+  },
+  {
+    $skip:1
+  },
+  {
+    $limit:2
+  },
+]);
+```
+
+### $filter
+
+```
+db.cols.aggregate([
+  {
+    $project: {
+      name:1,
+      filterValue:{
+        $filter:{
+          input:"$value",
+          as:"val",
+          cond:{
+            $gt:["$$val",30]
+          }
+        }
+      }
+    }
+  }
 ])
-```
-
-### $match
-
-```
-db.products.aggregate( [
-
- ] )
 ```

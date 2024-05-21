@@ -1,0 +1,7 @@
+[
+  { "_id": 1, "name": "alu1", "value": [3, 10, 95] },
+  { "_id": 2, "name": "alu2", "value": [8, 30, 15] },
+  { "_id": 3, "name": "alu3", "value": [5, 60, 75] },
+  { "_id": 4, "name": "alu4", "value": [5, 40, 55] },
+  { "_id": 5, "name": "alu5", "value": [1, 10, 15] }
+]

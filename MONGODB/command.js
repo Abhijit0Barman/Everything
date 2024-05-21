@@ -1,3 +1,4 @@
+// calculating count of products by brand wise
 db.products.aggregate([
   {
     $group: {
@@ -7,6 +8,14 @@ db.products.aggregate([
   },
 ]);
 
+// getting data by matching key & value
+db.products.aggregate([
+  {
+    $match: { brand: "Golden" },
+  },
+]);
+
+// inserting single object inside collection
 db.products.insertOne({
   id: 31,
   title: "Key Holder",
@@ -27,6 +36,88 @@ db.products.insertOne({
   ],
 });
 
+// Calculating Total Price by brand wise only Single brand
+db.products.aggregate([
+  { $match: { brand: "Golden" } },
+  {
+    $group: {
+      _id: null,
+      totalPrice: { $sum: "$price" },
+      company: "brand",
+    },
+  },
+]);
 
+// Calculating Total Price by brand wise of All brands
+db.products.aggregate([
+  {
+    $group: {
+      _id: "$brand",
+      totalPrice: { $sum: "$price" },
+    },
+  },
+]);
 
-3:31:33
+// Adding unique new key in everysingle docs
+db.products.aggregate([
+  {
+    $addFields: {
+      uniqueKey: {
+        $concat: ["$brand", "_", { $toString: "$id" }],
+      },
+    },
+  },
+]);
+
+// after calculating totalPrice by brand wise, getting data only above price-1300
+db.products.aggregate([
+  {
+    $group: {
+      _id: "$brand",
+      totalPrice: { $sum: "$price" },
+    },
+  },
+  { $match: { totalPrice: { $gt: 1300 } } },
+]);
+
+// before calculating totalPrice by brand wise, getting data only above price-1300
+db.products.aggregate([
+  { $match: { price: { $gt: 1300 } } },
+  {
+    $group: {
+      _id: "$brand",
+      totalPrice: { $sum: "$price" },
+    },
+  },
+]);
+
+//
+db.numbers.aggregate([
+  {
+    $match: { quantity: { $lte: 5 } },
+  },
+  {
+    $group: {
+      _id: "$targetPrice",
+      totalPrice: { $sum: "$price" },
+      totalAvg: { $avg: "$price" },
+    },
+  },
+  {
+    $sort: { _id: 1 },
+  },
+]);
+
+//
+db.products.aggregate([
+  { $match: { brand: { $eq: "Apple" } } },
+  {
+    $unwind: "$images",
+  },
+  {
+    $group: {
+      _id: null,
+      allImages: { $push: "$images" },
+    },
+  },
+]);

@@ -1,0 +1,12 @@
+[
+  { "_id": 1, "quantity": 1, "price": 10, "targetPrice": 10 },
+  { "_id": 2, "quantity": 2, "price": 20, "targetPrice": 40 },
+  { "_id": 3, "quantity": 2, "price": 30, "targetPrice": 50 },
+  { "_id": 4, "quantity": 3, "price": 10, "targetPrice": 30 },
+  { "_id": 5, "quantity": 3, "price": 20, "targetPrice": 70 },
+  { "_id": 6, "quantity": 3, "price": 30, "targetPrice": 100 }
+]
+
+
+
+
