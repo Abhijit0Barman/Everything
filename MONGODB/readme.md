@@ -517,3 +517,25 @@ db.cols.aggregate([
   }
 ])
 ```
+
+### $lookup
+
+```
+db.COLLECTION-NAME.aggregate([
+  {
+    $lookup: {
+      from: "COLLECTION-NAME",
+      localField: "FIELD-NAME",
+      foreignField: "FIELD-NAME",
+      as: "FIELD-NAME"
+    }
+  },
+  {
+    $addFields:{
+      "FIELD-NAME":{$arrayElemAt:["$FIELD-NAME",0]}
+    }
+  }
+])
+```
+
+4.14

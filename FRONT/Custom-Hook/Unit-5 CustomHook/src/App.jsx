@@ -1,7 +1,11 @@
 import "./App.css";
+// import Print from "./components/Print";
+import Timer from "./components/Timer";
 
 function App() {
-    return <>hello</>;
+    return <>
+        <Timer />
+    </>;
 }
 
 export default App;
